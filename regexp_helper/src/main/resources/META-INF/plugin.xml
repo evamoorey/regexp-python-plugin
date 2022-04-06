@@ -28,8 +28,8 @@
   <vendor>Pleasure command from HSE.</vendor>
 
   <actions>
-      <action id="test" class="org.intellij.sdk.regexp.test" text="test" description="test">
-          <add-to-group group-id="EditMenu" anchor="first"/>
+      <action id="CheckRegexp" class="org.intellij.sdk.regexp.CheckRegexp" text="Check regexp">
+          <add-to-group group-id="EditorPopupMenu" anchor="last"/>
       </action>
   </actions>
 

@@ -4,6 +4,6 @@ Build-JVM: 17 (Oracle Corporation 17+35-2724)
 Version: 0.1.0
 Build-Plugin: Gradle IntelliJ Plugin
 Build-Plugin-Version: 1.4.0
-Build-OS: Mac OS X 12.2.1 x86_64
+Build-OS: Mac OS X 12.3.1 x86_64
 Build-SDK: PY-2021.2
 

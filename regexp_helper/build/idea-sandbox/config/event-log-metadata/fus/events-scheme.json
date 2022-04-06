@@ -677,7 +677,7 @@
     "rules" : {
       "event_id" : [ "{enum#__event_id}" ],
       "event_data" : {
-        "group" : [ "{enum#__group}" ],
+        "group" : [ "{enum:Java_Frameworks|Web_Development|Version_Controls|Test_Tools|Application_Servers|Clouds|Swing|Android|Database_Tools|Other_Tools|Plugin_Development|Build_Tools}" ],
         "page" : [ "{regexp#integer}" ],
         "plugin" : [ "{util#plugin}" ],
         "plugin_type" : [ "{util#plugin_type}" ],
@@ -685,8 +685,7 @@
         "timestamp" : [ "{regexp#integer}" ]
       },
       "enums" : {
-        "__event_id" : [ "remaining.pages.skipped", "WizardDisplayed", "UIThemeChanged", "DesktopEntryCreated", "LauncherScriptCreated", "BundledPluginGroupDisabled", "BundledPluginGroupEnabled", "BundledPluginGroupCustomized", "FeaturedPluginInstalled" ],
-        "__group" : [ "Java_Frameworks", "Web_Development", "Version_Controls", "Test_Tools", "Application_Servers", "Clouds", "Swing", "Android", "Database_Tools", "Other_Tools", "Plugin_Development", "Build_Tools" ]
+        "__event_id" : [ "remaining.pages.skipped", "WizardDisplayed", "UIThemeChanged", "DesktopEntryCreated", "LauncherScriptCreated", "BundledPluginGroupDisabled", "BundledPluginGroupEnabled", "BundledPluginGroupCustomized", "FeaturedPluginInstalled" ]
       }
     }
   }, {
@@ -821,7 +820,7 @@
         "auto-sync" : [ "{enum#boolean}" ],
         "before-tasks" : [ "{enum#boolean}" ],
         "custom-driver" : [ "{enum#boolean}" ],
-        "dbms" : [ "{enum#db_name}", "{util#dbms}", "{enum#__dbms}", "{enum:MSSQL_LOCALDB}", "{enum:TIDB|YUGABYTE}" ],
+        "dbms" : [ "{enum#db_name}", "{util#dbms}", "{enum#__dbms}", "{enum:MSSQL_LOCALDB}", "{enum:TIDB|YUGABYTE}", "{enum:ZEN}" ],
         "external-data" : [ "{enum#boolean}" ],
         "init-script" : [ "{enum#boolean}" ],
         "introspect" : [ "{enum#_}" ],
@@ -1127,16 +1126,16 @@
       "from" : "1"
     } ],
     "rules" : {
-      "event_id" : [ "{enum#_}", "{enum#no_}", "stripTrailingSpaces.{enum#trailingSpaces}", "completionCaseSensitivity.{regexp#integer}", "smartBackspace.{enum#backspace}", "reformatOnPaste.{regexp#integer}", "importsOnPaste.{regexp#integer}", "noBreadcrumbsFor{util#lang}", "breadcrumbsFor{util#lang}" ],
+      "event_id" : [ "{enum#_}", "{enum#no_}", "stripTrailingSpaces.{enum#trailingSpaces}", "completionCaseSensitivity.{regexp#integer}", "smartBackspace.{enum#backspace}", "reformatOnPaste.{regexp#integer}", "importsOnPaste.{regexp#integer}", "noBreadcrumbsFor{util#lang}", "breadcrumbsFor{util#lang}", "{enum:not.default}" ],
       "event_data" : {
         "enabled" : [ "{enum#boolean}" ],
         "lang" : [ "{util#lang}" ],
-        "value" : [ "{enum#backspace}", "{enum#trailingSpaces}", "{regexp#integer}", "{enum#caret_movement}" ]
+        "setting_id" : [ "{enum:caretAfterLineEnd|caretInsideTabs|virtualSpaceAtFileBottom|softWraps|softWraps.console|softWraps.preview|softWraps.relativeIndent|softWraps.showAll|ensureNewlineAtEOF|quickDocOnMouseHover|blinkingCaret|blockCaret|rightMargin|lineNumbers|gutterIcons|foldingOutline|showLeadingWhitespace|showInnerWhitespace|showTrailingWhitespace|indentGuides|animatedScroll|dragNDrop|wheelZoom|mouseCamel|inplaceRename|preselectOnRename|inlineDialog|minimizeScrolling|afterReformatNotification|afterOptimizeNotification|smartHome|camelWords|editor.inlay.parameter.hints|breadcrumbsAbove|all.breadcrumbs|intentionBulb|renderDoc|intentionPreview|useEditorFontInInlays|breadcrumbs|richCopy|parameterAutoPopup|javadocAutoPopup|completionAutoPopup|autoPopupCharComplete|autoCompleteBasic|autoCompleteSmart|parameterInfoFullSignature|indentOnEnter|braceOnEnter|javadocOnEnter|scriptletEndOnEnter|smartEnd|autoCloseJavadocTags|surroundByQuoteOrBrace|pairBracketAutoInsert|pairQuoteAutoInsert|reformatOnRBrace|bracesHighlight|scopeHighlight|identifierUnderCaretHighlight|autoAddImports|completionHints|tabExitsBracketsAndQuotes|nextErrorActionGoesToErrorsFirst|suppressWarnings|importHintEnabled|showMethodSeparators|openTabsInMainWindow|stripTrailingSpaces|blinkPeriod|completionCaseSensitivity|smartBackspace|reformatOnPaste|importsOnPaste|autoReparseDelay|errorStripeMarkMinHeight|caret.movement.word|caret.movement.line|fileColorsEnabled|fileColorsEnabledForProjectView|fileColorsEnabledForTabs|show.actions.in.tooltip}" ],
+        "value" : [ "{regexp#integer}", "{enum:Whole|Changed|None}", "{enum:OFF|AUTOINDENT|INDENT}", "{enum:NONE|CURRENT|NEIGHBOR|START|END|BOTH|OTHER}" ]
       },
       "enums" : {
         "_" : [ "caretAfterLineEnd", "caretInsideTabs", "virtualSpaceAtFileBottom", "softWraps", "softWraps.console", "softWraps.preview", "softWraps.relativeIndent", "softWraps.showAll", "ensureNewlineAtEOF", "quickDocOnMouseHover", "blinkingCaret", "blockCaret", "rightMargin", "lineNumbers", "gutterIcons", "foldingOutline", "showLeadingWhitespace", "showInnerWhitespace", "showTrailingWhitespace", "indentGuides", "animatedScroll", "dragNDrop", "wheelZoom", "mouseCamel", "inplaceRename", "preselectOnRename", "inlineDialog", "minimizeScrolling", "afterReformatNotification", "afterOptimizeNotification", "smartHome", "camelWords", "editor.inlay.parameter.hints", "breadcrumbsAbove", "all.breadcrumbs", "breadcrumbs", "intentionBulb", "richCopy", "parameterAutoPopup", "javadocAutoPopup", "completionAutoPopup", "autoPopupCharComplete", "autoCompleteBasic", "autoCompleteSmart", "parameterInfoFullSignature", "indentOnEnter", "braceOnEnter", "javadocOnEnter", "smartEnd", "autoCloseJavadocTags", "surroundByQuoteOrBrace", "pairBracketAutoInsert", "pairQuoteAutoInsert", "reformatOnRBrace", "bracesHighlight", "scopeHighlight", "identifierUnderCaretHighlight", "autoAddImports", "completionHints", "externalAnnotationsInline", "inferredAnnotationsInline", "tabExitsBracketsAndQuotes", "stripTrailingSpaces", "completionCaseSensitivity", "smartBackspace", "reformatOnPaste", "importsOnPaste", "show.actions.in.tooltip", "nextErrorActionGoesToErrorsFirst", "autoReparseDelay", "errorStripeMarkMinHeight", "suppressWarnings", "showMethodSeparators", "importHintEnabled", "caret.movement.line", "caret.movement.word", "renderDoc", "scriptletEndOnEnter", "blinkPeriod", "fileColorsEnabledForProjectView", "fileColorsEnabledForTabs", "fileColorsEnabled", "intentionPreview" ],
         "backspace" : [ "OFF", "AUTOINDENT", "INDENT" ],
-        "caret_movement" : [ "NEIGHBOR", "NONE", "BOTH", "CURRENT", "START", "END" ],
         "no_" : [ "noCaretAfterLineEnd", "noCaretInsideTabs", "noVirtualSpaceAtFileBottom", "noSoftWraps", "noSoftWraps.console", "noSoftWraps.preview", "noSoftWraps.relativeIndent", "noSoftWraps.showAll", "noEnsureNewlineAtEOF", "noQuickDocOnMouseHover", "noBlinkingCaret", "noBlockCaret", "noRightMargin", "noLineNumbers", "noGutterIcons", "noFoldingOutline", "noShowLeadingWhitespace", "noShowInnerWhitespace", "noShowTrailingWhitespace", "noIndentGuides", "noAnimatedScroll", "noDragNDrop", "noWheelZoom", "noMouseCamel", "noInplaceRename", "noPreselectOnRename", "noInlineDialog", "noMinimizeScrolling", "noAfterReformatNotification", "noAfterOptimizeNotification", "noSmartHome", "noCamelWords", "noEditor.inlay.parameter.hints", "noBreadcrumbsBelow", "noBreadcrumbs", "noIntentionBulb", "noRichCopy", "noParameterAutoPopup", "noJavadocAutoPopup", "noCompletionAutoPopup", "noAutoPopupCharComplete", "noAutoCompleteBasic", "noAutoCompleteSmart", "noParameterInfoFullSignature", "noIndentOnEnter", "noBraceOnEnter", "noJavadocOnEnter", "noSmartEnd", "noAutoCloseJavadocTags", "noSurroundByQuoteOrBrace", "noPairBracketAutoInsert", "noPairQuoteAutoInsert", "noReformatOnRBrace", "noBracesHighlight", "noScopeHighlight", "noIdentifierUnderCaretHighlight", "noAutoAddImports", "noCompletionHints", "noExternalAnnotationsInline", "noInferredAnnotationsInline", "noTabExitsBracketsAndQuotes" ],
         "trailingSpaces" : [ "None", "Changed", "Whole" ]
       }
@@ -1502,7 +1501,8 @@
         "isSucceeded" : [ "{enum#boolean}" ],
         "plugin" : [ "{util#plugin}" ],
         "plugin_type" : [ "{util#plugin_type}" ],
-        "plugin_version" : [ "{util#plugin_version}" ]
+        "plugin_version" : [ "{util#plugin_version}" ],
+        "productId" : [ "{enum:unknown|IU|RM|PY|DS|PS|WS|CL|RD|GO}" ]
       },
       "enums" : {
         "__event_id" : [ "full.deploy.cycle.activity.started", "full.deploy.cycle.activity.finished", "download.ide.backend.activity.started", "download.ide.backend.activity.finished", "otherOptions.clicked", "useOldBackend.clicked", "openSshTerminal.clicked", "uploadInstaller.clicked", "useNewBackend.clicked", "documentation.clicked", "useDownloadLink.clicked", "checkConnectionAndContinue.clicked", "connect.clicked", "gtwFromStandaloneIde.started", "install_plugin" ]
@@ -1538,6 +1538,7 @@
       "event_data" : {
         "count" : [ "{regexp#integer}" ],
         "enabled" : [ "{enum#boolean}" ],
+        "fs_monitor" : [ "{enum:NONE|BUILTIN|EXTERNAL_FS_MONITOR}" ],
         "is_worktree_used" : [ "{enum#boolean}" ],
         "local_branches" : [ "{regexp#integer}" ],
         "multiple_root" : [ "{enum#boolean}" ],
@@ -1690,7 +1691,7 @@
       },
       "enums" : {
         "__event_id" : [ "enabled.language", "native.language", "rule", "strategy", "checkingContext" ],
-        "__value" : [ "en", "ru", "fr", "de", "pl", "it", "zh", "ja", "uk", "el", "ro", "es", "pt", "sk", "fa", "nl" ]
+        "__value" : [ "en", "ru", "fr", "de", "pl", "it", "zh", "ja", "uk", "el", "ro", "es", "pt", "sk", "fa", "nl", "km", "ast", "be", "sv", "gl", "eo", "ta", "unknown", "br", "ar", "tl", "sl", "ga", "da", "ca" ]
       }
     }
   }, {
@@ -2094,7 +2095,7 @@
     "rules" : {
       "event_id" : [ "{enum#__event_id}" ],
       "enums" : {
-        "__event_id" : [ "enabled", "node.interpreter.custom", "node.package.autodetect", "node.package.custom.package", "command.line.options.specified", "additional.rules.specified", "custom.config.specified" ]
+        "__event_id" : [ "enabled", "node.interpreter.custom", "node.package.autodetect", "node.package.custom.package", "command.line.options.specified", "additional.rules.specified", "custom.config.specified", "eslint.fix.on.save" ]
       }
     }
   }, {
@@ -2325,6 +2326,33 @@
       }
     }
   }, {
+    "id" : "login",
+    "builds" : [ ],
+    "versions" : [ {
+      "from" : "1"
+    } ],
+    "rules" : {
+      "event_id" : [ "{enum#__event_id}" ],
+      "event_data" : {
+        "activity_id" : [ "{regexp#integer}" ],
+        "duration_ms" : [ "{regexp#integer}" ],
+        "ide_requires_license" : [ "{enum#boolean}" ],
+        "input_event" : [ "{util#shortcut}" ],
+        "logged_in" : [ "{enum#boolean}" ],
+        "login_provider" : [ "{enum:jba|google|github|gitlab|bitbucket}" ],
+        "newsletter" : [ "{enum#boolean}" ],
+        "onboarding" : [ "{enum#boolean}" ],
+        "plugins_require_licenses" : [ "{enum#boolean}" ],
+        "session_time_ms" : [ "{regexp#integer}" ],
+        "source" : [ "{enum:login_dialog|licenses_user_info|licenses_new_license|licenses_trial}", "{enum:LicenseDialogLink}" ],
+        "successful" : [ "{enum#boolean}" ],
+        "troubles_pressed" : [ "{enum#boolean}" ]
+      },
+      "enums" : {
+        "__event_id" : [ "exit", "licenses.dialog.shown", "request.trial", "continue", "browser.login", "buy.license" ]
+      }
+    }
+  }, {
     "id" : "microservices.usages",
     "builds" : [ ],
     "versions" : [ {
@@ -2481,7 +2509,7 @@
       },
       "enums" : {
         "__event_id" : [ "action.invoked", "balloon.collapsed", "balloon.expanded", "closed.by.user", "event.log.balloon.shown", "hyperlink.clicked", "logged", "settings.clicked", "shown" ],
-        "notification_id" : [ "ignored.to.exclude.synchronization.notification", "externally.added.files.notification", "project.configuration.files.added.notification", "manage.ignore.files.notification", "github.missing.default.account", "github.pull.request.cannot.set.tracking.branch", "github.clone.unable.to.create.destination.dir", "github.clone.unable.to.find.destination", "github.open.in.browser.file.is.not.under.repo", "github.open.in.browser.cannot.get.last.revision", "github.rebase.success", "github.gist.cannot.create", "github.pull.request.cannot.load.branches", "github.pull.request.cannot.collect.additional.data", "github.pull.request.cannot.load.forks", "github.pull.request.failed.to.add.remote", "github.pull.request.push.failed", "github.pull.request.creation.error", "github.pull.request.cannot.collect.diff.data", "github.pull.request.cannot.find.repo", "github.pull.request.created", "github.pull.request.cannot.process.remote", "github.pull.request.no.current.branch", "github.rebase.cannot.validate.upstream.remote", "github.rebase.upstream.is.own.repo", "github.rebase.cannot.get.user.info", "github.rebase.cannot.retrieve.upstream.info", "github.rebase.cannot.configure.upstream.remote", "github.rebase.repo.not.found", "github.rebase.cannot.load.repo.info", "github.rebase.repo.is.not.a.fork", "github.share.cannot.find.git.repo", "github.share.cannot.create.repo", "github.share.project.successfully.shared", "github.share.empty.repo.created", "github.share.project.created.init.commit.failed", "github.share.init.push.failed", "github.gist.created", "github.git.repo.init.error", "unknown", "hg.update.unresolved.conflicts.error", "git.merge.local.changes.detected", "vcs.patch.apply.rollback.failed", "hg.qrefresh.error", "git.revert.abort.failed", "git.fetch.success", "git.branch.operation.success", "git.pull.failed", "hg.merge.warning", "vcs.commit.finished.with.warnings", "vcs.shelve.successful", "git.merge.reset.error", "git.stage.commit.successful", "git.clone.unable.to.create.destination.dir", "git.rebase.cannot.continue", "vcs.commit.canceled", "git.branch.rename.rollback.success", "hg.merge.error", "hg.rebase.error", "git.update.no.tracked.branch.error", "git.rebase.update.project.error", "hg.tag.creation.error", "git.local.changes.not.restored", "hg.clone.destination.error", "vcs.shelve.failed", "hg.merging.with.ancestor.skipped", "vcs.patch.apply.aborted", "hg.pushed.successfully", "git.remote.branch.deletion.success", "hg.repository.created", "git.tag.created", "hg.qpop.completed.with.errors", "git.branch.operation.error", "hg.compare.with.branch.error", "git.fetch.error", "hg.nothing.to.push", "git.rebase.cannot.abort", "hg.unsupported.extensions", "vcs.patch.partially.applied", "git.branches.update.successful", "hg.exception.during.merge.commit", "git.init.failed", "git.rebase.not.allowed", "hg.qfold.error", "hg.qfinish.error", "git.merge.abort.success", "git.init.error", "git.rebase.commit.edit.undo.error.repo.changed", "git.reset.failed", "git.update.detached.head.error", "git.create.branch.rollback.successful", "git.branch.checkout.failed", "git.delete.branch.on.merge", "vcs.root.added", "git.stash.failed", "vcs.patch.copied.to.clipboard", "git.merge.abort.failed", "vcs.could.not.compare.with.branch", "git.reset.successful", "git.branch.creation.failed", "git.branch.deletion.rollback.error", "hg.graft.continue.error", "hg.merge.exception", "git.rebase.abort.succeeded", "hg.debugancestor.error", "hg.log.command.execution.error", "hg.unable.to.run.executable", "hg.bookmark.error", "git.rebase.commit.edit.undo.error", "git.unstash.with.unresolved.conflicts", "git.unstash.failed", "hg.qgoto.error", "hg.clone.error", "git.clone.failed", "git.rebase.abort.failed", "hg.remote.auth.error", "vcs.uncommitted.changes.saving.error", "git.update.nothing.to.update", "git.merge.rollback.error", "hg.qnew.error", "git.checkout.success", "git.update.error", "git.cannot.resolve.conflict", "git.unstash.with.conflicts", "space.sharing.not.finished", "hg.rebase.continue.error", "git.checkout.rollback.error", "git.reset.partially.failed", "git.remote.branch.deletion.error", "hg.qrename.error", "hg.unsupported.version", "hg.repo.creation.error", "space.git.repo.init.error", "git.tag.remote.deletion.error", "hg.push.error", "vcs.cherry.pick.error", "git.repository.created", "vcs.roots.invalid", "git.stash.local.changes.detected", "git.could.not.compare.with.branch", "git.rebase.not.started", "space.project.shared.successfully", "vcs.compare.failed", "vcs.patch.apply.success.applied", "hg.qdelete.error", "hg.branch.creation.error", "git.cherry.pick.abort.failed", "git.rebase.rollback.failed", "git.merge.error", "vcs.patch.apply.cannot.find.patch.file", "git.rebase.commit.edit.undo.error.protected.branch", "git.rebase.successful", "vcs.commit.failed", "git.could.not.load.changes.of.commit", "git.unresolved.conflicts", "vcs.patch.apply.new.files.error", "hg.rebase.abort.error", "git.revert.abort.success", "git.stage.commit.error", "git.tag.not.created", "git.create.branch.rollback.error", "git.fix.tracked.not.on.branch", "vcs.shelve.deletion.undo", "hg.tag.creation.failed", "git.tag.deletion.rollback.error", "hg.update.error", "vcs.roots.registered", "hg.status.command.error", "hg.qimport.error", "vcs.patch.apply.not.patch.type.file", "vcs.commit.finished", "git.could.not.save.uncommitted.changes", "hg.rename.failed", "git.branch.rename.rollback.failed", "git.cherry.pick.abort.success", "hg.qpop.error", "git.conflict.resolving.error", "git.merge.failed", "hg.pull.error", "git.unstash.patch.applied", "hg.bookmark.name.is.empty", "hg.pull.auth.required", "git.rebase.abort", "vcs.patch.already.applied", "git.checkout.new.branch.operation.rollback.error", "hg4idea.changesets.error", "vcs.patch.creation.failed", "hg.graft.error", "hg.qpush.error", "git.checkout.new.branch.operation.rollback.successful", "github.rebase.remote.origin.not.found", "github.rebase.account.not.found", "github.rebase.multi.repo.not.supported", "rebase.error.failed.to.match.gh.repo", "git.branch.set.upstream.failed", "git.log.could.not.load.changes.of.commit", "vcs.project.partially.updated", "vcs.shelf.undo.delete", "vcs.branch.operations.are.executed.on.all.roots", "git.rebase.collect.updated.changes.error", "git.push.not.supported", "vcs.inactive.ranges.damaged", "git.commit.cancelled", "git.fetch.result", "git.tag.remote.deletion.success", "git.fetch.cancelled", "git.fetch.details", "git.project.updated", "git.all.files.are.up.to.date", "git.fetch.result.error", "git.project.partially.updated", "git.push.result", "git.branch.deleted", "git.tag.restored", "git.files.updated.after.merge", "vcs.project.update.finished", "git.tag.deleted", "git.commit.edit.success", "space.other", "gradle.jvm.invalid", "gradle.jvm.configured", "gradle.configuration.error", "sh.update.shellcheck.error", "sh.update.shellcheck.success", "sh.update.formatter.success", "sh.install.formatter.error", "sh.update.formatter.error", "sh.install.formatter", "sh.update.shellcheck", "sh.update.formatter", "sh.install.formatter.success" ]
+        "notification_id" : [ "ignored.to.exclude.synchronization.notification", "externally.added.files.notification", "project.configuration.files.added.notification", "manage.ignore.files.notification", "github.missing.default.account", "github.pull.request.cannot.set.tracking.branch", "github.clone.unable.to.create.destination.dir", "github.clone.unable.to.find.destination", "github.open.in.browser.file.is.not.under.repo", "github.open.in.browser.cannot.get.last.revision", "github.rebase.success", "github.gist.cannot.create", "github.pull.request.cannot.load.branches", "github.pull.request.cannot.collect.additional.data", "github.pull.request.cannot.load.forks", "github.pull.request.failed.to.add.remote", "github.pull.request.push.failed", "github.pull.request.creation.error", "github.pull.request.cannot.collect.diff.data", "github.pull.request.cannot.find.repo", "github.pull.request.created", "github.pull.request.cannot.process.remote", "github.pull.request.no.current.branch", "github.rebase.cannot.validate.upstream.remote", "github.rebase.upstream.is.own.repo", "github.rebase.cannot.get.user.info", "github.rebase.cannot.retrieve.upstream.info", "github.rebase.cannot.configure.upstream.remote", "github.rebase.repo.not.found", "github.rebase.cannot.load.repo.info", "github.rebase.repo.is.not.a.fork", "github.share.cannot.find.git.repo", "github.share.cannot.create.repo", "github.share.project.successfully.shared", "github.share.empty.repo.created", "github.share.project.created.init.commit.failed", "github.share.init.push.failed", "github.gist.created", "github.git.repo.init.error", "unknown", "hg.update.unresolved.conflicts.error", "git.merge.local.changes.detected", "vcs.patch.apply.rollback.failed", "hg.qrefresh.error", "git.revert.abort.failed", "git.fetch.success", "git.branch.operation.success", "git.pull.failed", "hg.merge.warning", "vcs.commit.finished.with.warnings", "vcs.shelve.successful", "git.merge.reset.error", "git.stage.commit.successful", "git.clone.unable.to.create.destination.dir", "git.rebase.cannot.continue", "vcs.commit.canceled", "git.branch.rename.rollback.success", "hg.merge.error", "hg.rebase.error", "git.update.no.tracked.branch.error", "git.rebase.update.project.error", "hg.tag.creation.error", "git.local.changes.not.restored", "hg.clone.destination.error", "vcs.shelve.failed", "hg.merging.with.ancestor.skipped", "vcs.patch.apply.aborted", "hg.pushed.successfully", "git.remote.branch.deletion.success", "hg.repository.created", "git.tag.created", "hg.qpop.completed.with.errors", "git.branch.operation.error", "hg.compare.with.branch.error", "git.fetch.error", "hg.nothing.to.push", "git.rebase.cannot.abort", "hg.unsupported.extensions", "vcs.patch.partially.applied", "git.branches.update.successful", "hg.exception.during.merge.commit", "git.init.failed", "git.rebase.not.allowed", "hg.qfold.error", "hg.qfinish.error", "git.merge.abort.success", "git.init.error", "git.rebase.commit.edit.undo.error.repo.changed", "git.reset.failed", "git.update.detached.head.error", "git.create.branch.rollback.successful", "git.branch.checkout.failed", "git.delete.branch.on.merge", "vcs.root.added", "git.stash.failed", "vcs.patch.copied.to.clipboard", "git.merge.abort.failed", "vcs.could.not.compare.with.branch", "git.reset.successful", "git.branch.creation.failed", "git.branch.deletion.rollback.error", "hg.graft.continue.error", "hg.merge.exception", "git.rebase.abort.succeeded", "hg.debugancestor.error", "hg.log.command.execution.error", "hg.unable.to.run.executable", "hg.bookmark.error", "git.rebase.commit.edit.undo.error", "git.unstash.with.unresolved.conflicts", "git.unstash.failed", "hg.qgoto.error", "hg.clone.error", "git.clone.failed", "git.rebase.abort.failed", "hg.remote.auth.error", "vcs.uncommitted.changes.saving.error", "git.update.nothing.to.update", "git.merge.rollback.error", "hg.qnew.error", "git.checkout.success", "git.update.error", "git.cannot.resolve.conflict", "git.unstash.with.conflicts", "space.sharing.not.finished", "hg.rebase.continue.error", "git.checkout.rollback.error", "git.reset.partially.failed", "git.remote.branch.deletion.error", "hg.qrename.error", "hg.unsupported.version", "hg.repo.creation.error", "space.git.repo.init.error", "git.tag.remote.deletion.error", "hg.push.error", "vcs.cherry.pick.error", "git.repository.created", "vcs.roots.invalid", "git.stash.local.changes.detected", "git.could.not.compare.with.branch", "git.rebase.not.started", "space.project.shared.successfully", "vcs.compare.failed", "vcs.patch.apply.success.applied", "hg.qdelete.error", "hg.branch.creation.error", "git.cherry.pick.abort.failed", "git.rebase.rollback.failed", "git.merge.error", "vcs.patch.apply.cannot.find.patch.file", "git.rebase.commit.edit.undo.error.protected.branch", "git.rebase.successful", "vcs.commit.failed", "git.could.not.load.changes.of.commit", "git.unresolved.conflicts", "vcs.patch.apply.new.files.error", "hg.rebase.abort.error", "git.revert.abort.success", "git.stage.commit.error", "git.tag.not.created", "git.create.branch.rollback.error", "git.fix.tracked.not.on.branch", "vcs.shelve.deletion.undo", "hg.tag.creation.failed", "git.tag.deletion.rollback.error", "hg.update.error", "vcs.roots.registered", "hg.status.command.error", "hg.qimport.error", "vcs.patch.apply.not.patch.type.file", "vcs.commit.finished", "git.could.not.save.uncommitted.changes", "hg.rename.failed", "git.branch.rename.rollback.failed", "git.cherry.pick.abort.success", "hg.qpop.error", "git.conflict.resolving.error", "git.merge.failed", "hg.pull.error", "git.unstash.patch.applied", "hg.bookmark.name.is.empty", "hg.pull.auth.required", "git.rebase.abort", "vcs.patch.already.applied", "git.checkout.new.branch.operation.rollback.error", "hg4idea.changesets.error", "vcs.patch.creation.failed", "hg.graft.error", "hg.qpush.error", "git.checkout.new.branch.operation.rollback.successful", "github.rebase.remote.origin.not.found", "github.rebase.account.not.found", "github.rebase.multi.repo.not.supported", "rebase.error.failed.to.match.gh.repo", "git.branch.set.upstream.failed", "git.log.could.not.load.changes.of.commit", "vcs.project.partially.updated", "vcs.shelf.undo.delete", "vcs.branch.operations.are.executed.on.all.roots", "git.rebase.collect.updated.changes.error", "git.push.not.supported", "vcs.inactive.ranges.damaged", "git.commit.cancelled", "git.fetch.result", "git.tag.remote.deletion.success", "git.fetch.cancelled", "git.fetch.details", "git.project.updated", "git.all.files.are.up.to.date", "git.fetch.result.error", "git.project.partially.updated", "git.push.result", "git.branch.deleted", "git.tag.restored", "git.files.updated.after.merge", "vcs.project.update.finished", "git.tag.deleted", "git.commit.edit.success", "space.other", "gradle.jvm.invalid", "gradle.jvm.configured", "gradle.configuration.error", "sh.update.shellcheck.error", "sh.update.shellcheck.success", "sh.update.formatter.success", "sh.install.formatter.error", "sh.update.formatter.error", "sh.install.formatter", "sh.update.shellcheck", "sh.update.formatter", "sh.install.formatter.success", "git.bad.executable", "git.init.stage.failed" ]
       }
     }
   }, {
@@ -2958,7 +2986,8 @@
       "event_id" : [ "{enum:python_package_installed}" ],
       "event_data" : {
         "executionType" : [ "{enum#executionType}" ],
-        "interpreterType" : [ "{enum#interpreterType}" ],
+        "interpreterType" : [ "{enum#interpreterType}", "{enum:poetry}" ],
+        "lang" : [ "{util#lang}" ],
         "package" : [ "{enum#__package}" ],
         "package_version" : [ "{regexp#version}" ],
         "python_implementation" : [ "{enum:PyPy|Jython|Python}" ],
@@ -2980,7 +3009,8 @@
       "event_id" : [ "{enum:django_used|flask_used|app_engine_used|template_engine}" ],
       "event_data" : {
         "executionType" : [ "{enum#__executionType}" ],
-        "interpreterType" : [ "{enum:pipenv|condavenv|virtualenv|regular}" ],
+        "interpreterType" : [ "{enum:pipenv|condavenv|virtualenv|regular}", "{enum:poetry}" ],
+        "lang" : [ "{util#lang}" ],
         "py_template_language" : [ "{enum#__py_template_language}" ],
         "python_implementation" : [ "{enum:PyPy|Jython|Python}" ],
         "python_version" : [ "{regexp#integer}", "{regexp#version}" ]
@@ -3000,7 +3030,8 @@
       "event_id" : [ "{enum:matplotlib_in_toolwindow_used|sci_view_used|data_view_toolwindow_used}" ],
       "event_data" : {
         "executionType" : [ "{enum#__executionType}" ],
-        "interpreterType" : [ "{enum:pipenv|condavenv|virtualenv|regular}" ],
+        "interpreterType" : [ "{enum:pipenv|condavenv|virtualenv|regular}", "{enum:poetry}" ],
+        "lang" : [ "{util#lang}" ],
         "python_implementation" : [ "{enum:PyPy|Jython|Python}" ],
         "python_version" : [ "{regexp#integer}", "{regexp#version}" ]
       },
@@ -3075,6 +3106,7 @@
       "event_data" : {
         "executionType" : [ "{enum#__executionType}" ],
         "interpreterType" : [ "{enum:pipenv|condavenv|virtualenv|regular}", "{enum:poetry}" ],
+        "lang" : [ "{util#lang}" ],
         "python_implementation" : [ "{enum:PyPy|Jython|Python}" ],
         "python_version" : [ "{regexp#integer}", "{regexp#version}" ]
       },
@@ -3351,6 +3383,18 @@
       }
     }
   }, {
+    "id" : "rust.counters",
+    "builds" : [ ],
+    "versions" : [ {
+      "from" : "1"
+    } ],
+    "rules" : {
+      "event_id" : [ "{enum:new_project_creation}" ],
+      "event_data" : {
+        "template" : [ "{enum:binary|library|wasm|proc_macro|custom}" ]
+      }
+    }
+  }, {
     "id" : "rust.project",
     "builds" : [ ],
     "versions" : [ {
@@ -3544,8 +3588,10 @@
         "adv_explore_place" : [ "{enum:MAIN_TOOLBAR|SETTINGS|SHARE|CLONE}" ],
         "adv_overview_place" : [ "{enum:MAIN_TOOLBAR|SETTINGS|CLONE}" ],
         "auto" : [ "{enum#boolean}" ],
+        "changes_loading_duration_ms" : [ "{regexp#integer}" ],
         "commits_selection_type" : [ "{enum:SINGLE|ALL|SUBSET_CONNECTED|SUBSET_SPLIT}" ],
         "details_tab_type" : [ "{enum:DETAILS|COMMITS}", "{enum:FILES}" ],
+        "diffs_loading_duration_ms" : [ "{regexp#integer}" ],
         "edit_message_is_empty" : [ "{enum#boolean}" ],
         "filter_text_empty" : [ "{enum#boolean}" ],
         "loader_type" : [ "{enum:GIT|SPACE}" ],
@@ -3567,7 +3613,7 @@
         "with_title" : [ "{enum#boolean}" ]
       },
       "enums" : {
-        "__event_id" : [ "adv_explore_space", "adv_log_in_link", "adv_sign_up_link", "adv_watch_overview", "button_log_in", "button_log_out", "cancel_login", "chat_collapse_discussion", "chat_delete_message", "chat_discard_edit_message", "chat_discard_send_message", "chat_expand_discussion", "chat_open_thread", "chat_reopen_discussion", "chat_resolve_discussion", "chat_send_edit_message", "chat_send_message", "chat_start_edit_message", "clone_repo", "create_new_project", "open_git_settings_in_space", "open_main_toolbar_popup", "open_share_project", "open_space_clone_tab", "review_details_accept_changes", "review_details_add_participant_icon", "review_details_back_to_list", "review_details_change_commits_selection", "review_details_checkout_branch", "review_details_edit_participant", "review_details_open_project_in_space", "review_details_open_review_diff", "review_details_open_review_in_space", "review_details_resume_review", "review_details_select_details_tab", "review_details_show_timeline", "review_details_update_branch", "review_details_wait_for_response", "review_diff_close_leave_comment", "review_diff_leave_comment", "review_diff_loaded", "reviews_list_change_quick_filter", "reviews_list_change_text_filter", "reviews_list_log_in_link", "reviews_list_open_review", "reviews_list_refresh_action", "share_project", "start_creating_new_project", "create_review", "review_details_participant_action", "auto_auth_failed", "mark_as_unread", "open_ssh_settings_in_space", "mark_as_read", "open_diff", "create_review_opened", "create_review_back_to_list" ]
+        "__event_id" : [ "adv_explore_space", "adv_log_in_link", "adv_sign_up_link", "adv_watch_overview", "button_log_in", "button_log_out", "cancel_login", "chat_collapse_discussion", "chat_delete_message", "chat_discard_edit_message", "chat_discard_send_message", "chat_expand_discussion", "chat_open_thread", "chat_reopen_discussion", "chat_resolve_discussion", "chat_send_edit_message", "chat_send_message", "chat_start_edit_message", "clone_repo", "create_new_project", "open_git_settings_in_space", "open_main_toolbar_popup", "open_share_project", "open_space_clone_tab", "review_details_accept_changes", "review_details_add_participant_icon", "review_details_back_to_list", "review_details_change_commits_selection", "review_details_checkout_branch", "review_details_edit_participant", "review_details_open_project_in_space", "review_details_open_review_diff", "review_details_open_review_in_space", "review_details_resume_review", "review_details_select_details_tab", "review_details_show_timeline", "review_details_update_branch", "review_details_wait_for_response", "review_diff_close_leave_comment", "review_diff_leave_comment", "review_diff_loaded", "reviews_list_change_quick_filter", "reviews_list_change_text_filter", "reviews_list_log_in_link", "reviews_list_open_review", "reviews_list_refresh_action", "share_project", "start_creating_new_project", "create_review", "review_details_participant_action", "auto_auth_failed", "mark_as_unread", "open_ssh_settings_in_space", "mark_as_read", "open_diff", "create_review_opened", "create_review_back_to_list", "all_review_diff_loaded" ]
       }
     }
   }, {
@@ -3638,6 +3684,27 @@
       },
       "enums" : {
         "__event_id" : [ "bootstrap", "splash", "appInit", "totalDuration", "projectFrameVisible", "splashShown" ]
+      }
+    }
+  }, {
+    "id" : "stash.interactions",
+    "builds" : [ ],
+    "versions" : [ {
+      "from" : "4"
+    } ],
+    "rules" : {
+      "event_id" : [ "{enum#__event_id}" ],
+      "event_data" : {
+        "create_branch" : [ "{enum#boolean}" ],
+        "duration_ms" : [ "{regexp#integer}" ],
+        "ide_activity_id" : [ "{regexp#integer}" ],
+        "keep_index" : [ "{enum#boolean}" ],
+        "message_entered" : [ "{enum#boolean}" ],
+        "pop_stash" : [ "{enum#boolean}" ],
+        "reinstate_index" : [ "{enum#boolean}" ]
+      },
+      "enums" : {
+        "__event_id" : [ "stash.pop.started", "stash.push.dialog", "stash.pop.dialog", "stash.push.finished", "stash.pop.finished", "stash.push.started" ]
       }
     }
   }, {
@@ -3732,12 +3799,13 @@
       "event_id" : [ "{enum#os}", "{enum#__event_id}" ],
       "event_data" : {
         "build" : [ "{regexp#integer}" ],
-        "distro" : [ "{enum:almalinux|alpine|amzn|arch|bunsenlabs|centos|chromeos|debian|deepin|devuan|elementary|fedora|galliumos|garuda|gentoo|kali|linuxmint|mageia|manjaro|neon|nixos|ol|opensuse-leap|opensuse-tumbleweed|parrot|pop|pureos|raspbian|rhel|rocky|rosa|sabayon|slackware|solus|ubuntu|void|zorin|other|unknown}" ],
+        "distro" : [ "{enum:almalinux|alpine|amzn|arch|bunsenlabs|centos|chromeos|debian|deepin|devuan|elementary|fedora|galliumos|garuda|gentoo|kali|linuxmint|mageia|manjaro|neon|nixos|ol|opensuse-leap|opensuse-tumbleweed|parrot|pop|pureos|raspbian|rhel|rocky|rosa|sabayon|slackware|solus|ubuntu|void|zorin|other|unknown}", "{enum:endeavouros}" ],
         "id" : [ "{regexp#hash}", "{enum:unknown}" ],
         "locale" : [ "{enum#__locale}" ],
         "name" : [ "{enum#os}" ],
         "release" : [ "{enum#linux}", "{regexp#version}" ],
         "revision" : [ "{regexp#integer}" ],
+        "shell" : [ "{enum:sh|ash|bash|csh|dash|fish|ksh|tcsh|xonsh|zsh|nu|other|unknown}" ],
         "time_zone" : [ "{regexp#time_zone}" ],
         "value" : [ "{regexp#time_zone}", "{regexp#hash}", "{enum:unknown}" ],
         "version" : [ "{regexp#version}", "{enum:unknown.format}", "{enum#__version}" ],
@@ -4159,14 +4227,16 @@
         "duration_ms" : [ "{regexp#integer}" ],
         "enabled" : [ "{enum#boolean}" ],
         "ide_activity_id" : [ "{regexp#integer}" ],
+        "is_full_refresh" : [ "{enum#boolean}" ],
         "plugin" : [ "{util#plugin}" ],
         "plugin_type" : [ "{util#plugin_type}" ],
         "plugin_version" : [ "{util#plugin_version}" ],
         "unversionedDelta" : [ "{regexp#integer}" ],
+        "vcs" : [ "{enum#vcs}" ],
         "wasUpdatingBefore" : [ "{enum#boolean}" ]
       },
       "enums" : {
-        "__event_id" : [ "update.started", "update.finished", "commit.started", "commit.finished", "fetch.started", "fetch.finished", "non.modal.commit.state.changed", "non.modal.commit.promotion.shown", "non.modal.commit.promotion.accepted", "non.modal.commit.promotion.rejected", "changes.view.refresh", "cloned.project.opened", "clone.invoked" ]
+        "__event_id" : [ "update.started", "update.finished", "commit.started", "commit.finished", "fetch.started", "fetch.finished", "non.modal.commit.state.changed", "non.modal.commit.promotion.shown", "non.modal.commit.promotion.accepted", "non.modal.commit.promotion.rejected", "changes.view.refresh", "cloned.project.opened", "clone.invoked", "clm.refresh.finished", "clm.refresh.started" ]
       }
     }
   }, {
@@ -4634,5 +4704,5 @@
       "version" : "Unknown|unknown.format|unknown|UNKNOWN|((\\d+\\.?)*\\d+)"
     }
   },
-  "version" : "2426"
+  "version" : "2463"
 }

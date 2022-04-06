@@ -174,7 +174,7 @@
   } ],
   "rules" : {
     "enums" : {
-      "boolean" : [ "true", "false" ],
+      "boolean" : [ "true", "false", "TRUE", "FALSE", "True", "False" ],
       "plugin_type" : [ "JVM_CORE", "PLATFORM", "JB_BUNDLED", "JB_NOT_BUNDLED", "LISTED", "NOT_LISTED", "JB_UPDATED_BUNDLED", "UNKNOWN", "FROM_SOURCES" ]
     },
     "regexps" : {
@@ -185,5 +185,5 @@
       "version" : "Unknown|unknown.format|unknown|UNKNOWN|((\\d+\\.?)*\\d+)"
     }
   },
-  "version" : "2426"
+  "version" : "2463"
 }
