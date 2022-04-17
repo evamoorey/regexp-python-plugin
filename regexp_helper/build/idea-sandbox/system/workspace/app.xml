@@ -1,7 +1,7 @@
 <application>
   <component name="EventLogWhitelist">
-    <update recorder-id="MLSE" last-modified="1647938985000" />
-    <update recorder-id="FUS" last-modified="1647938984000" />
+    <update recorder-id="MLSE" last-modified="1648820649000" />
+    <update recorder-id="FUS" last-modified="1648820649000" />
     <options recorder-id="MLSE">
       <option name="dataThreshold" value="15000" />
       <option name="id_salt" value="" />
