@@ -1,6 +1,3 @@
-<!-- Copyright 2000-2022 JetBrains s.r.o. and other contributors. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. -->
-<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
-
 <idea-plugin>
 
   <!-- Unique id for this plugin. Must stay constant for the life of the plugin. -->
@@ -27,12 +24,9 @@
   <!-- Text to display as company information on Preferences/Settings | Plugin page -->
   <vendor>Pleasure command from HSE.</vendor>
 
-  <actions>
-      <action id="CheckRegexp" class="org.intellij.sdk.regexp.CheckRegexp" text="Check regexp">
-          <add-to-group group-id="EditorPopupMenu" anchor="last"/>
-      </action>
-  </actions>
-
-
+  <extensions defaultExtensionNs="com.intellij">
+    <toolWindow id="RegExp explorer" icon="AllIcons.General.Modified" anchor="right" order="last"
+                factoryClass="org.intellij.sdk.regexp.MyToolWindowFactory"/>
+  </extensions>
 
 </idea-plugin>

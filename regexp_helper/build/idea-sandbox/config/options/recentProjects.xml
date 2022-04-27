@@ -2,15 +2,15 @@
   <component name="RecentProjectsManager">
     <option name="additionalInfo">
       <map>
-        <entry key="$USER_HOME$/Desktop/regexps/pythonProject">
+        <entry key="$USER_HOME$/PycharmProjects/pythonProject">
           <value>
-            <RecentProjectMetaInfo frameTitle="pythonProject – main.py" projectWorkspaceId="26hKl7s6LAkA3F71biovdPfP7LW">
+            <RecentProjectMetaInfo frameTitle="pythonProject" projectWorkspaceId="28O5J4lIrrGXdAFgLAS6n3jd6aF">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PY-212.4746.96" />
-              <option name="buildTimestamp" value="1627381987815" />
-              <frame x="0" y="25" width="1440" height="790" extendedState="6" />
+              <option name="build" value="PY-212.5712.39" />
+              <option name="buildTimestamp" value="1640054617300" />
+              <frame x="20" y="45" width="1400" height="750" />
               <option name="productionCode" value="PY" />
-              <option name="projectOpenTimestamp" value="1649266195851" />
+              <option name="projectOpenTimestamp" value="1651079102903" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
