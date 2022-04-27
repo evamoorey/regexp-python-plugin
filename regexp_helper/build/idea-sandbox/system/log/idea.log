@@ -149,3 +149,397 @@ survived indexes:
 2022-04-27 20:05:24,031 [  46718]   INFO - newvfs.persistent.PersistentFS - VFS dispose completed 
 2022-04-27 20:05:24,096 [  46783]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE SHUTDOWN ------------------------------------------------------ 
 2022-04-27 20:05:24,101 [  46788]   INFO - org.jetbrains.io.BuiltInServer - web server stopped 
+2022-04-27 21:36:27,818 [      0]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE STARTED ------------------------------------------------------ 
+2022-04-27 21:36:27,863 [     45]   INFO - .intellij.util.EnvironmentUtil - loading shell env: /bin/bash -l -i -c '/Users/eva/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.2.4/3f7601d05f08ba58cd2a596c2d5ab893b99e5df4/pycharmPY-2021.2.4/bin/printenv' '/var/folders/0r/409ysjl52nn3h_0b9bgp9zxc0000gp/T/intellij-shell-env.11071181530945983093.tmp' 
+2022-04-27 21:36:28,156 [    338]   INFO - .intellij.util.EnvironmentUtil - shell environment loaded (19 vars) 
+2022-04-27 21:36:28,362 [    544]   INFO -        #com.intellij.idea.Main - IDE: PyCharm (build #PY-212.5712.39, 21 Dec 2021 05:43) 
+2022-04-27 21:36:28,372 [    554]   INFO -        #com.intellij.idea.Main - OS: Mac OS X (12.3.1, x86_64) 
+2022-04-27 21:36:28,485 [    667]   INFO -        #com.intellij.idea.Main - JRE: 11.0.13+8-b1504.49 (JetBrains s.r.o.) 
+2022-04-27 21:36:28,486 [    668]   INFO -        #com.intellij.idea.Main - JVM: 11.0.13+8-b1504.49 (OpenJDK 64-Bit Server VM) 
+2022-04-27 21:36:28,492 [    674]   INFO -        #com.intellij.idea.Main - JVM Args: -Dapple.awt.fileDialogForDirectories=true -Dapple.laf.useScreenMenuBar=true -Didea.auto.reload.plugins=true -Didea.classpath.index.enabled=false -Didea.config.path=/Users/eva/Desktop/regexps/regexp-helper-python/regexp_helper/build/idea-sandbox/config -Didea.is.internal=true -Didea.platform.prefix=Python -Didea.plugins.path=/Users/eva/Desktop/regexps/regexp-helper-python/regexp_helper/build/idea-sandbox/plugins -Didea.required.plugins.id=org.intellij.sdk.regexp -Didea.smooth.progress=false -Didea.system.path=/Users/eva/Desktop/regexps/regexp-helper-python/regexp_helper/build/idea-sandbox/system -Xms256m -Xmx512m -Dfile.encoding=UTF-8 -Duser.country=RU -Duser.language=en -Duser.variant -ea 
+2022-04-27 21:36:28,492 [    674]   INFO -        #com.intellij.idea.Main - library path: /Users/eva/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:. 
+2022-04-27 21:36:28,492 [    674]   INFO -        #com.intellij.idea.Main - boot library path: /Users/eva/.gradle/caches/modules-2/files-2.1/com.jetbrains/jbre/jbr_jcef-11_0_13-osx-x64-b1504.49/extracted/jbr/Contents/Home/lib 
+2022-04-27 21:36:28,712 [    894]   INFO -        #com.intellij.idea.Main - locale=en_RU JNU=UTF-8 file.encoding=UTF-8
+  idea.config.path=/Users/eva/Desktop/regexps/regexp-helper-python/regexp_helper/build/idea-sandbox/config
+  idea.system.path=/Users/eva/Desktop/regexps/regexp-helper-python/regexp_helper/build/idea-sandbox/system
+  idea.plugins.path=/Users/eva/Desktop/regexps/regexp-helper-python/regexp_helper/build/idea-sandbox/plugins
+  idea.log.path=/Users/eva/Desktop/regexps/regexp-helper-python/regexp_helper/build/idea-sandbox/system/log 
+2022-04-27 21:36:28,756 [    938]   INFO -        #com.intellij.idea.Main - CPU cores: 8; ForkJoinPool.commonPool: java.util.concurrent.ForkJoinPool@674f65d7[Running, parallelism = 7, size = 7, active = 3, running = 3, steals = 4, tasks = 0, submissions = 0]; factory: com.intellij.concurrency.IdeaForkJoinWorkerThreadFactory@435ebb9e 
+2022-04-27 21:36:29,027 [   1209]   INFO -        #com.intellij.idea.Main - JNA library (64-bit) loaded in 260 ms 
+2022-04-27 21:36:29,534 [   1716]   WARN - i.mac.MacOSApplicationProvider - No URL bundle (CFBundleURLTypes) is defined in the main bundle.
+To be able to open external links, specify protocols in the app layout section of the build file.
+Example: args.urlSchemes = ["your-protocol"] will handle following links: your-protocol://open?file=file&line=line 
+2022-04-27 21:36:34,628 [   6810]   INFO - e.plugins.DisabledPluginsState - Plugins to enable: [com.jetbrains.codeWithMe] 
+2022-04-27 21:36:34,827 [   7009]   INFO - llij.ide.plugins.PluginManager - Loaded bundled plugins: IDEA CORE (212.5712.39), WSL File System Support (212.5712.39), Ini (212.5712.39), EditorConfig (212.5712.39), TextMate Bundles (212.5712.39), Windows 10 Light Theme (212.5712.39), Mercurial (212.5712.39), Machine Learning Code Completion (212.5712.39), IDE Settings Sync (212.5712.39), Perforce Helix Core (212.5712.39), Subversion (212.5712.39), GNU GetText files support (*.po) (212.5712.39), IntelliLang (212.5712.39), Gherkin (212.5712.39), Terminal (212.5712.39), Git (212.5712.39), ChangeReminder (212.5712.39), FTP/SFTP Connectivity (ex. Remote Hosts Access) (212.5712.39), File Watchers (212.5712.39), YAML (212.5712.39), Puppet (212.5712.39), Docker (212.5712.39), IDE Features Trainer (212.5712.39), IDE Features Trainer: Git Lessons (212.5712.39), Task Management (212.5712.39), Time Tracking (212.5712.39), macOS Light Theme (212.5712.39), Performance Testing (212.5712.39), Performance Testing (Dynamic Plugins) (212.5712.39), Settings Repository (212.5712.39), SSH Remote Run (212.5712.39), WSL Support Framework (212.5712.39), Emoji Picker (212.5712.39), Copyright (212.5712.39), Shell Script (212.5712.39), Properties (212.5712.39), Diagrams (212.5712.39), Images (212.5712.39), Markdown (212.5712.39), Grazie (212.5712.39), GitHub (212.5712.39), CSS (212.5712.39), Stylus (212.5712.39), Haml (212.5712.39), Less (212.5712.39), Sass (212.5712.39), Configuration Script (212.5712.39), Shared Indexes (212.5712.39), Shared Project Indexes (212.5712.39), Shared Indexes for Python (212.5712.39), Code With Me (212.5712.39), ReStructuredText (212.5712.39), JavaScript and TypeScript (212.5712.39), HTTP Client (212.5712.39), TSLint (212.5712.39), Database Tools and SQL (212.5712.39), JavaScript Intention Power Pack (212.5712.39), JavaScript Debugger (212.5712.39), Python (212.5712.39), Datalore (0.1.13-212), PyCharm Professional Customization (212.5712.39), Shared Indexes for Python (212.5712.39), CoffeeScript (212.5712.39), Angular and AngularJS (212.5712.39), HTML Tools (212.5712.39), Vagrant (212.5712.39), Space (212.5712.39) 
+2022-04-27 21:36:34,827 [   7009]   INFO - llij.ide.plugins.PluginManager - Loaded custom plugins: RegexpHelper (0.1.0) 
+2022-04-27 21:36:37,923 [  10105]   INFO - ication.options.PathMacrosImpl - Loaded path macros: {} 
+2022-04-27 21:36:38,007 [  10189]   INFO - rains.ide.BuiltInServerManager - built-in server started, port 63343 
+2022-04-27 21:36:38,174 [  10356]   INFO - intellij.util.io.FilePageCache - lower=100; upper=492; buffer=10; max=492 
+2022-04-27 21:36:38,265 [  10447]   INFO - til.net.ssl.CertificateManager - Default SSL context initialized 
+2022-04-27 21:36:38,384 [  10566]   WARN - j.internal.DebugAttachDetector - Unable to start DebugAttachDetector, please add `--add-exports java.base/jdk.internal.vm=ALL-UNNAMED` to VM options 
+2022-04-27 21:36:38,558 [  10740]   INFO - lij.diagnostic.DebugLogManager - Set TRACE for the following categories: #com.jetbrains.rdserver.requests, #com.jetbrains.rd.ide.document, #com.jetbrains.rdserver.document, #com.jetbrains.rdserver.editors, #com.jetbrains.rdserver.actions, #com.jetbrains.rdserver.permissions 
+2022-04-27 21:36:38,733 [  10915]   INFO - intellij.diagnostic.JitWatcher - JIT compilation state checking enabled 
+2022-04-27 21:36:39,165 [  11347]   INFO - penapi.application.Experiments - Experimental features enabled for user: wsl.p9.support, wsl.prefer.p9.support, wsl.p9.show.roots.in.file.chooser, wsl.execute.with.wsl.exe, linux.native.menu, recent.and.edited.files.together, show.create.new.element.in.popup, search.everywhere.mixed.results, editor.reader.mode, new.large.text.file.viewer, wsl.fsd.content.loader, reuse.target.paths.for.rsync 
+2022-04-27 21:36:39,250 [  11432]   INFO - impl.SharedIndexMainZipStorage - Shared Indexes Storage is opened and empty 
+2022-04-27 21:36:39,610 [  11792]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: com.intellij] 
+2022-04-27 21:36:39,620 [  11802]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: com.intellij] 
+2022-04-27 21:36:39,620 [  11802]   WARN - nSystem.impl.ActionManagerImpl - keymap "NetBeans 6.5" not found [Plugin: com.intellij] 
+2022-04-27 21:36:39,620 [  11802]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: com.intellij] 
+2022-04-27 21:36:39,635 [  11817]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse (Mac OS X)" not found [Plugin: com.intellij] 
+2022-04-27 21:36:39,762 [  11944]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: org.jetbrains.plugins.github] 
+2022-04-27 21:36:39,764 [  11946]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse (Mac OS X)" not found [Plugin: org.jetbrains.plugins.github] 
+2022-04-27 21:36:39,768 [  11950]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse (Mac OS X)" not found [Plugin: org.jetbrains.plugins.github] 
+2022-04-27 21:36:39,832 [  12014]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: JavaScript] 
+2022-04-27 21:36:39,832 [  12014]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: JavaScript] 
+2022-04-27 21:36:39,862 [  12044]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: Pythonid] 
+2022-04-27 21:36:39,862 [  12044]   WARN - nSystem.impl.ActionManagerImpl - keymap "NetBeans 6.5" not found [Plugin: Pythonid] 
+2022-04-27 21:36:39,866 [  12048]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: Pythonid] 
+2022-04-27 21:36:39,870 [  12052]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: Pythonid] 
+2022-04-27 21:36:39,904 [  12086]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: HtmlTools] 
+2022-04-27 21:36:39,998 [  12180]   WARN - tellij.ide.SystemHealthMonitor - issue detected: bundled.jre.m1.arch.message 
+2022-04-27 21:36:40,122 [  12304]   INFO - pl.local.NativeFileWatcherImpl - Starting file watcher: /Users/eva/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.2.4/3f7601d05f08ba58cd2a596c2d5ab893b99e5df4/pycharmPY-2021.2.4/bin/mac/fsnotifier 
+2022-04-27 21:36:40,132 [  12314]   WARN - l.NotificationGroupManagerImpl - Notification group CodeWithMe is already registered (group=com.intellij.notification.NotificationGroup@592bac60). Plugin descriptor: PluginDescriptor(name=Code With Me, id=com.jetbrains.codeWithMe, descriptorPath=plugin.xml, path=~/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.2.4/3f7601d05f08ba58cd2a596c2d5ab893b99e5df4/pycharmPY-2021.2.4/plugins/cwm-plugin, version=212.5712.39, package=null) 
+2022-04-27 21:36:40,152 [  12334]   INFO - pl.local.NativeFileWatcherImpl - Native file watcher is operational. 
+2022-04-27 21:36:40,161 [  12343]   INFO - penapi.application.Experiments - Experimental feature 'terminal.shell.command.handling' is now turned OFF 
+2022-04-27 21:36:40,191 [  12373]   INFO - cloudConfig.CloudConfigManager - === Start: JBA_NOT_CONNECTED (2ms) === 
+2022-04-27 21:36:40,231 [  12413]   INFO - cloudConfig.CloudConfigManager - === Start.updateInitStatus === 
+2022-04-27 21:36:40,248 [  12430]   INFO - cloudConfig.CloudConfigManager - === calculateInitStatus === 
+2022-04-27 21:36:40,270 [  12452]   INFO - m.intellij.ui.mac.touchbar.NST - touchbar-server isn't running, skip nst loading 
+2022-04-27 21:36:40,278 [  12460]   INFO - i.mac.touchbar.TouchbarSupport - touchbar support is enabled 
+2022-04-27 21:36:40,281 [  12463]   INFO - ings.impl.UpdateCheckerService - channel: release 
+2022-04-27 21:36:41,019 [  13201]   INFO - nfig.ETagCloudConfigFileClient - === Get cloud config URL: https://cloudconfig.jetbrains.com/cloudconfig/files === 
+2022-04-27 21:36:41,549 [  13731]   INFO - ntellij.ui.mac.screenmenu.Menu - use new ScreenMenuBar implementation 
+2022-04-27 21:36:41,650 [  13832]   INFO - cloudConfig.CloudConfigManager - === calculateInitStatus.value: JBA_NOT_CONNECTED === 
+2022-04-27 21:36:41,795 [  13977]   INFO - leBasedIndexDataInitialization - Index data initialization done: 2945 ms. Initialized indexes: [FilenameIndex, FrameworkDetectionIndex, TodoIndex, IdIndex, filetypes, Stubs, Trigram.Index, fileIncludes, DomFileIndex, RelaxSymbolIndex, XmlTagNames, XmlNamespaces, html5.custom.attributes.index, SchemaTypeInheritance, json.file.root.values, HashFragmentIndex, editorconfig.index.name, yaml.keys.name, PuppetFactsIndex, PuppetRubyPluginsIndex, docker.compose.services, xmlProperties, CssIndex, css.template.selectors, CompassFunctionsIndex, js.test.names, js.package.index, js.custom.single.entry.index, js.implicit.elements.index, js.string.literal.words.index, TypeScriptExternalPathCandidates, http.request.execution.environment, http.request.completion.host, http.request.headers.values.index, sql.types.count.index, sql.routine.index, Py.module.name, Py.setuptools.namespace, DjangoBlockInheritanceIndex, angularjs.template.cache, angularjs.ui.router.views.index, angularjs.app.index, HtmlTagIdIndex]. 
+2022-04-27 21:36:42,343 [  14525]   INFO - exImpl$StubIndexInitialization - Index data initialization done: 548 ms. Initialized stub indexes: {Css.id, angular2.templateUrl.index, dom.elementClass, ini.property.key, Python.Decorator, Css.attr, Py.variable.shortName, es6.assignment.index, es6.exported.index, Css.class, angular2.source.directive.index, dom.namespaceKey, angularjs.generic.modules.index, puppet.variable, Py.class.attributes, Py.class.super, Py.function.shortName, Py.module.attribute, puppet.top.variable, angular2.source.pipe.index, angular2.source.module.index, angularjs.templateUrl.index, angularjs.delimiter.index, Stylus.variables, js.qualified.shortName, Django.manager, puppet.class, Py.class.shortNameInsensitive, angular2.ivy.directive.index, amd.baseUrl.index, js.global.symbol.index, ts.embedded.content.index, angular2.metadata.function.index, sql.names, properties.index, js.lazy.packages, Css.ampersand.selector, Css.custom.property, Scss.function, JS.subclass.stub.index, Less.mixins, js.namespace.index, JS.base.types.index, JS.custom.stub.index, JS.class.super, JS.global.qualified.elements, js.typedef.index2, js.local.namespace.members.index, js.amd.modules, puppet.resource, angular2.metadata.className.index, Scss.placeholder.selector, Scss.variable, puppet.type, sql.table.shortName, angular2.metadata.pipe.index, angular2.metadata.directive.index, puppet.resource.by.type, js.doc.modules, puppet.class.instantiation, sql.column.name, angular2.ivy.module.index, puppet.function, angular2.metadata.node.index, angularjs.directives.doc.index, puppet.subclass, angularjs.directives.index, angularjs.module.index, angularjs.filter.index, angularjs.controller.index, angularjs.symbol.index, angularjs.ui.router.states.index, js.nonglobal.symbol.index, angularjs.ui.router.generic.states.index, Py.class.shortName, Django.foreignKey, amd.requirePaths.index, puppet.namespace, angular2.ivy.pipe.index, puppet.node, Css.custom.mixin, Stylus.mixins, angular2.metadata.module.index, markdown.header, js.gcl.modules, ts.local.classes, js.exported.index, js.class.index2, js.symbol.qualified.names.index, Less.variables, Scss.mixin, js.element.qualifiedName, JS.class.implements, js.symbol.index2, js.generics.index, ts.external.module.index, js.imported.bindings.index}. 
+2022-04-27 21:36:43,518 [  15700]   INFO - cloudConfig.CloudConfigManager - === End.updateInitStatus === 
+2022-04-27 21:36:44,709 [  16891]   INFO - plication.impl.ApplicationImpl - LONG VFS PROCESSING. Topic=BulkFileListener, offender=class org.jetbrains.plugins.notebooks.core.impl.file.NotebookFileChangeListener, message=after, time=914ms 
+2022-04-27 21:36:45,288 [  17470]   INFO - erver.followMe.FollowMeManager - Register new user 0:'eva' with ClientId=ClientId(value=Host) 
+2022-04-27 21:36:45,897 [  18079]   INFO - lij.diagnostic.DebugLogManager - Set TRACE for the following categories: #com.jetbrains.rdserver.requests, #com.jetbrains.rd.ide.document, #com.jetbrains.rdserver.document, #com.jetbrains.rdserver.editors, #com.jetbrains.rdserver.actions, #com.jetbrains.rdserver.permissions 
+2022-04-27 21:36:46,131 [  18313]   INFO - tests.impl.DistributedTestHost - Host address=localhost/127.0.0.1 
+2022-04-27 21:36:46,174 [  18356]   INFO - el.ide.impl.WorkspaceModelImpl - Load workspace model from cache in 435 ms 
+2022-04-27 21:36:46,360 [  18542]   INFO - ins.rd.platform.codeWithMe.a.g - sessionStatus: null 
+2022-04-27 21:36:46,367 [  18549]   INFO - ins.rd.platform.codeWithMe.a.g - freeSessionRemainingTimeMs: null null 
+2022-04-27 21:36:46,452 [  18634]   INFO - rojectCodeStyleSettingsManager - Initialized from default code style settings. 
+2022-04-27 21:36:46,910 [  19092]   INFO - ar.ExperimentalToolbarSettings - Loading old state, main toolbar: false navBar true 
+2022-04-27 21:36:47,849 [  20031]   INFO -              PerformancePlugin - Performance Plugin is in silent mode 
+2022-04-27 21:36:48,755 [  20937]   INFO - erver.followMe.FollowMeManager - Register new user 0:'eva' with ClientId=ClientId(value=Host) 
+2022-04-27 21:36:48,900 [  21082]   INFO - ion.DelayedProjectSynchronizer - Workspace model loaded from cache. Syncing real project state into workspace model in 908 ms. Thread[JobScheduler FJ pool 2/7,4,main] 
+2022-04-27 21:36:49,072 [  21254]   INFO - roject.DumbServiceGuiTaskQueue - Running dumb mode task: OnDiskSharedIndexChunkLocator 
+2022-04-27 21:36:49,076 [  21258]   INFO - roject.DumbServiceGuiTaskQueue - Running dumb mode task: UnindexedFilesUpdater[pythonProject] 
+2022-04-27 21:36:49,094 [  21276]   INFO - ge.ExternalProjectsDataStorage - Load external projects data in 4 millis (read time: 1) 
+2022-04-27 21:36:49,621 [  21803]   INFO - ij.psi.search.LogFileTypeIndex - Loading file type index snapshot 
+2022-04-27 21:36:49,658 [  21840]   INFO - indexing.UnindexedFilesUpdater - Started indexing of pythonProject. Reason: On project open 
+2022-04-27 21:36:49,698 [  21880]   INFO - indexing.UnindexedFilesUpdater - Performing delayed pushing properties tasks for pythonProject took 1ms; general responsiveness: ok; EDT responsiveness: ok 
+2022-04-27 21:36:49,769 [  21951]   INFO - redIndexChunkConfigurationImpl - Chunk bundled-python-sdk-b84083ee875f-cf9a850f160f-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-212.5712.39 is registered for project 'pythonProject: matching: (fb=38, stub=97), incompatible: (fb=0, stub=0), unknown: (fb=9, stub=9),  
+2022-04-27 21:36:49,794 [  21976]   INFO - indexing.UnindexedFilesUpdater - Scanning of pythonProject uses 7 scanning threads 
+2022-04-27 21:36:50,021 [  22203]   INFO - llij.database.util.SqlDialects - SQL dialects initialized in 3 ms 
+2022-04-27 21:36:50,167 [  22349]   INFO - oudConfig.StatusBarInfoManager - === StatusBar.start create === 
+2022-04-27 21:36:50,232 [  22414]   INFO - redIndexChunkConfigurationImpl - Chunk bundled-js-predefined-ffdd448c697d-34490f0bdf90-JavaScript-PY-212.5712.39 is registered for project 'pythonProject: matching: (fb=33, stub=75), incompatible: (fb=0, stub=0), unknown: (fb=9, stub=9),  
+2022-04-27 21:36:50,456 [  22638]   INFO - SharedIndexPostStartupActivity - Attached 2 pre-built shared indexes: bundled-python-sdk-b84083ee875f-cf9a850f160f-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-212.5712.39, bundled-js-predefined-ffdd448c697d-34490f0bdf90-JavaScript-PY-212.5712.39 
+2022-04-27 21:36:50,514 [  22696]   INFO - ramework.util.RdCoroutineScope - RdCoroutineHost overridden 
+2022-04-27 21:36:50,554 [  22736]   WARN - ctionSystem.impl.ActionUpdater - 1035 ms to expand group child CodeWithMeNavbarGroup 
+2022-04-27 21:36:50,603 [  22785]   INFO - ProjectRootPostStartUpActivity - /Users/eva/PycharmProjects/pythonProject/.idea case-sensitivity: expected=false actual=false 
+2022-04-27 21:36:50,616 [  22798]   INFO - j.ide.script.IdeStartupScripts - 0 startup script(s) found 
+2022-04-27 21:36:50,653 [  22835]   INFO - .diagnostic.PerformanceWatcher - Post-startup activities under progress took 2740ms; general responsiveness: ok; EDT responsiveness: 0/3 sluggish, 1/3 very slow 
+2022-04-27 21:36:50,770 [  22952]   INFO - tor.impl.FileEditorManagerImpl - Project opening took 5114 ms 
+2022-04-27 21:36:51,116 [  23298]   INFO - indexing.UnindexedFilesUpdater - Scanning completed for pythonProject. Number of scanned files: 325; Number of files for indexing: 1 took 1398ms; general responsiveness: ok; EDT responsiveness: 1/2 sluggish 
+2022-04-27 21:36:51,140 [  23322]   INFO - indexing.UnindexedFilesUpdater - Use 4 indexing threads for indexing of pythonProject 
+2022-04-27 21:36:51,316 [  23498]   INFO - System.impl.PopupMenuPreloader - Popup menu 'File' preloaded at 'MainMenu' in 236 ms 
+2022-04-27 21:36:51,357 [  23539]   INFO - System.impl.PopupMenuPreloader - Popup menu 'Edit' preloaded at 'MainMenu' in 281 ms 
+2022-04-27 21:36:51,633 [  23815]   INFO - System.impl.PopupMenuPreloader - Popup menu 'View' preloaded at 'MainMenu' in 556 ms 
+2022-04-27 21:36:51,758 [  23940]   INFO - indexing.UnindexedFilesUpdater - Finished for pythonProject. Unindexed files update took 630ms; general responsiveness: ok; EDT responsiveness: ok 
+2022-04-27 21:36:51,760 [  23942]   INFO - ij.psi.search.LogFileTypeIndex - File type index snapshot dropped 
+2022-04-27 21:36:51,845 [  24027]   INFO - penapi.project.DumbServiceImpl - updateFinished 
+2022-04-27 21:36:51,867 [  24049]   INFO - tFileBasedIndexStartupActivity - Has changed files: false; project=Project(name=pythonProject, containerState=COMPONENT_CREATED, componentStore=/Users/eva/PycharmProjects/pythonProject) 
+2022-04-27 21:36:51,909 [  24091]   INFO - .services.SpaceKtsFileDetector - SpaceKtsFileDetector 
+2022-04-27 21:36:51,962 [  24144]   INFO - System.impl.PopupMenuPreloader - Popup menu 'Code' preloaded at 'MainMenu' in 885 ms 
+2022-04-27 21:36:53,160 [  25342]   INFO - System.impl.PopupMenuPreloader - Popup menu 'Navigate' preloaded at 'MainMenu' in 70 ms 
+2022-04-27 21:36:53,262 [  25444]   INFO - System.impl.PopupMenuPreloader - Popup menu 'Run' preloaded at 'MainMenu' in 158 ms 
+2022-04-27 21:36:53,391 [  25573]   INFO - System.impl.PopupMenuPreloader - Popup menu 'Refactor' preloaded at 'MainMenu' in 292 ms 
+2022-04-27 21:36:53,425 [  25607]   INFO - System.impl.PopupMenuPreloader - Popup menu 'Window' preloaded at 'MainMenu' in 321 ms 
+2022-04-27 21:36:53,467 [  25649]   INFO - System.impl.PopupMenuPreloader - Popup menu 'Help' preloaded at 'MainMenu' in 361 ms 
+2022-04-27 21:36:53,473 [  25655]   INFO - System.impl.PopupMenuPreloader - Popup menu 'Tools' preloaded at 'MainMenu' in 369 ms 
+2022-04-27 21:36:53,568 [  25750]   INFO - .script.IdeScriptEngineManager - javax.script.ScriptEngineManager initialized in 283 ms 
+2022-04-27 21:36:55,824 [  28006]   INFO - m.codeWithMe.CodeWithMeCleanup - running activity to cleanup old thin clients... Root path is '/Users/eva/Library/Caches/JetBrains' 
+2022-04-27 21:36:55,826 [  28008]   INFO - m.codeWithMe.CodeWithMeCleanup - found 0 Code With Me client system folders to check 
+2022-04-27 21:36:55,828 [  28010]   INFO - m.codeWithMe.CodeWithMeCleanup - found 0 Code With Me client config folders to check 
+2022-04-27 21:36:55,829 [  28011]   INFO - m.codeWithMe.CodeWithMeCleanup - keep only [] major versions 
+2022-04-27 21:37:51,988 [  84170]   INFO - rationStore.ComponentStoreImpl - Saving Module: 'pythonProject'TemplatesService took 12 ms 
+2022-04-27 21:37:52,140 [  84322]   INFO - rationStore.ComponentStoreImpl - Saving Project(name=pythonProject, containerState=COMPONENT_CREATED, componentStore=/Users/eva/PycharmProjects/pythonProject)RunManager took 27 ms, XDebuggerManager took 16 ms 
+2022-04-27 21:37:52,304 [  84486]   INFO - erver.followMe.FollowMeManager - Unregister user 0:'eva' with ClientId=ClientId(value=Host) 
+2022-04-27 21:37:52,491 [  84673]   INFO - ication.options.PathMacrosImpl - Saved path macros: {} 
+2022-04-27 21:37:52,526 [  84708]   INFO - rationStore.ComponentStoreImpl - Saving appFileTypeManager took 25 ms 
+2022-04-27 21:37:53,552 [  85734]   INFO - rationStore.ComponentStoreImpl - Saving appFileTypeManager took 19 ms, GeneralSettings took 13 ms 
+2022-04-27 21:37:54,916 [  87098]   INFO - System.impl.PopupMenuPreloader - Popup menu 'Help' preloaded at 'MainMenu' in 22 ms 
+2022-04-27 21:37:54,919 [  87101]   INFO - System.impl.PopupMenuPreloader - Popup menu 'File' preloaded at 'MainMenu' in 26 ms 
+2022-04-27 21:37:55,005 [  87187]   INFO - il.indexing.FileBasedIndexImpl - START INDEX SHUTDOWN 
+2022-04-27 21:37:55,166 [  87348]   INFO - tellij.psi.stubs.StubIndexImpl - StubIndexExtension-s were unloaded 
+2022-04-27 21:37:55,266 [  87448]   INFO - il.indexing.FileBasedIndexImpl - END INDEX SHUTDOWN 
+2022-04-27 21:37:55,269 [  87451]   INFO - stubs.SerializationManagerImpl - Start shutting down /Users/eva/Desktop/regexps/regexp-helper-python/regexp_helper/build/idea-sandbox/system/index/rep.names 
+2022-04-27 21:37:55,270 [  87452]   INFO - stubs.SerializationManagerImpl - Finished shutting down /Users/eva/Desktop/regexps/regexp-helper-python/regexp_helper/build/idea-sandbox/system/index/rep.names 
+2022-04-27 21:37:55,272 [  87454]   INFO - newvfs.persistent.PersistentFS - VFS dispose started 
+2022-04-27 21:37:55,279 [  87461]   INFO - newvfs.persistent.PersistentFS - VFS dispose completed 
+2022-04-27 21:37:55,279 [  87461]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE SHUTDOWN ------------------------------------------------------ 
+2022-04-27 21:37:55,282 [  87464]   INFO - org.jetbrains.io.BuiltInServer - web server stopped 
+2022-04-27 21:39:21,530 [      0]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE STARTED ------------------------------------------------------ 
+2022-04-27 21:39:21,605 [     75]   INFO - .intellij.util.EnvironmentUtil - loading shell env: /bin/bash -l -i -c '/Users/eva/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.2.4/3f7601d05f08ba58cd2a596c2d5ab893b99e5df4/pycharmPY-2021.2.4/bin/printenv' '/var/folders/0r/409ysjl52nn3h_0b9bgp9zxc0000gp/T/intellij-shell-env.17358565573215544311.tmp' 
+2022-04-27 21:39:21,859 [    329]   INFO - .intellij.util.EnvironmentUtil - shell environment loaded (19 vars) 
+2022-04-27 21:39:22,054 [    524]   INFO -        #com.intellij.idea.Main - IDE: PyCharm (build #PY-212.5712.39, 21 Dec 2021 05:43) 
+2022-04-27 21:39:22,055 [    525]   INFO -        #com.intellij.idea.Main - OS: Mac OS X (12.3.1, x86_64) 
+2022-04-27 21:39:22,137 [    607]   INFO -        #com.intellij.idea.Main - JRE: 11.0.13+8-b1504.49 (JetBrains s.r.o.) 
+2022-04-27 21:39:22,139 [    609]   INFO -        #com.intellij.idea.Main - JVM: 11.0.13+8-b1504.49 (OpenJDK 64-Bit Server VM) 
+2022-04-27 21:39:22,143 [    613]   INFO -        #com.intellij.idea.Main - JVM Args: -Dapple.awt.fileDialogForDirectories=true -Dapple.laf.useScreenMenuBar=true -Didea.auto.reload.plugins=true -Didea.classpath.index.enabled=false -Didea.config.path=/Users/eva/Desktop/regexps/regexp-helper-python/regexp_helper/build/idea-sandbox/config -Didea.is.internal=true -Didea.platform.prefix=Python -Didea.plugins.path=/Users/eva/Desktop/regexps/regexp-helper-python/regexp_helper/build/idea-sandbox/plugins -Didea.required.plugins.id=org.intellij.sdk.regexp -Didea.smooth.progress=false -Didea.system.path=/Users/eva/Desktop/regexps/regexp-helper-python/regexp_helper/build/idea-sandbox/system -Xms256m -Xmx512m -Dfile.encoding=UTF-8 -Duser.country=RU -Duser.language=en -Duser.variant -ea 
+2022-04-27 21:39:22,144 [    614]   INFO -        #com.intellij.idea.Main - library path: /Users/eva/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:. 
+2022-04-27 21:39:22,146 [    616]   INFO -        #com.intellij.idea.Main - boot library path: /Users/eva/.gradle/caches/modules-2/files-2.1/com.jetbrains/jbre/jbr_jcef-11_0_13-osx-x64-b1504.49/extracted/jbr/Contents/Home/lib 
+2022-04-27 21:39:22,356 [    826]   INFO -        #com.intellij.idea.Main - locale=en_RU JNU=UTF-8 file.encoding=UTF-8
+  idea.config.path=/Users/eva/Desktop/regexps/regexp-helper-python/regexp_helper/build/idea-sandbox/config
+  idea.system.path=/Users/eva/Desktop/regexps/regexp-helper-python/regexp_helper/build/idea-sandbox/system
+  idea.plugins.path=/Users/eva/Desktop/regexps/regexp-helper-python/regexp_helper/build/idea-sandbox/plugins
+  idea.log.path=/Users/eva/Desktop/regexps/regexp-helper-python/regexp_helper/build/idea-sandbox/system/log 
+2022-04-27 21:39:22,423 [    893]   INFO -        #com.intellij.idea.Main - CPU cores: 8; ForkJoinPool.commonPool: java.util.concurrent.ForkJoinPool@20683fae[Running, parallelism = 7, size = 7, active = 3, running = 3, steals = 4, tasks = 0, submissions = 0]; factory: com.intellij.concurrency.IdeaForkJoinWorkerThreadFactory@6ad8cb5f 
+2022-04-27 21:39:22,717 [   1187]   INFO -        #com.intellij.idea.Main - JNA library (64-bit) loaded in 292 ms 
+2022-04-27 21:39:23,083 [   1553]   WARN - i.mac.MacOSApplicationProvider - No URL bundle (CFBundleURLTypes) is defined in the main bundle.
+To be able to open external links, specify protocols in the app layout section of the build file.
+Example: args.urlSchemes = ["your-protocol"] will handle following links: your-protocol://open?file=file&line=line 
+2022-04-27 21:39:28,161 [   6631]   INFO - e.plugins.DisabledPluginsState - Plugins to enable: [com.jetbrains.codeWithMe] 
+2022-04-27 21:39:28,352 [   6822]   INFO - llij.ide.plugins.PluginManager - Loaded bundled plugins: IDEA CORE (212.5712.39), Settings Repository (212.5712.39), Performance Testing (212.5712.39), Performance Testing (Dynamic Plugins) (212.5712.39), macOS Light Theme (212.5712.39), Task Management (212.5712.39), IDE Features Trainer (212.5712.39), YAML (212.5712.39), FTP/SFTP Connectivity (ex. Remote Hosts Access) (212.5712.39), Terminal (212.5712.39), IntelliLang (212.5712.39), GNU GetText files support (*.po) (212.5712.39), Git (212.5712.39), Subversion (212.5712.39), IDE Features Trainer: Git Lessons (212.5712.39), Gherkin (212.5712.39), Perforce Helix Core (212.5712.39), IDE Settings Sync (212.5712.39), ChangeReminder (212.5712.39), Docker (212.5712.39), Machine Learning Code Completion (212.5712.39), Mercurial (212.5712.39), Time Tracking (212.5712.39), WSL File System Support (212.5712.39), File Watchers (212.5712.39), Windows 10 Light Theme (212.5712.39), TextMate Bundles (212.5712.39), EditorConfig (212.5712.39), Ini (212.5712.39), Puppet (212.5712.39), ReStructuredText (212.5712.39), Code With Me (212.5712.39), Configuration Script (212.5712.39), Shared Indexes (212.5712.39), Shared Project Indexes (212.5712.39), Copyright (212.5712.39), Images (212.5712.39), CSS (212.5712.39), Haml (212.5712.39), Sass (212.5712.39), Less (212.5712.39), Markdown (212.5712.39), GitHub (212.5712.39), Space (212.5712.39), HTML Tools (212.5712.39), Properties (212.5712.39), Diagrams (212.5712.39), Grazie (212.5712.39), Shell Script (212.5712.39), Stylus (212.5712.39), JavaScript and TypeScript (212.5712.39), JavaScript Debugger (212.5712.39), JavaScript Intention Power Pack (212.5712.39), Database Tools and SQL (212.5712.39), CoffeeScript (212.5712.39), TSLint (212.5712.39), HTTP Client (212.5712.39), Emoji Picker (212.5712.39), SSH Remote Run (212.5712.39), WSL Support Framework (212.5712.39), Python (212.5712.39), Shared Indexes for Python (212.5712.39), PyCharm Professional Customization (212.5712.39), Datalore (0.1.13-212), Vagrant (212.5712.39), Angular and AngularJS (212.5712.39), Shared Indexes for Python (212.5712.39) 
+2022-04-27 21:39:28,352 [   6822]   INFO - llij.ide.plugins.PluginManager - Loaded custom plugins: RegexpHelper (0.1.0) 
+2022-04-27 21:39:31,476 [   9946]   INFO - ication.options.PathMacrosImpl - Loaded path macros: {} 
+2022-04-27 21:39:31,545 [  10015]   INFO - rains.ide.BuiltInServerManager - built-in server started, port 63343 
+2022-04-27 21:39:31,822 [  10292]   WARN - j.internal.DebugAttachDetector - Unable to start DebugAttachDetector, please add `--add-exports java.base/jdk.internal.vm=ALL-UNNAMED` to VM options 
+2022-04-27 21:39:31,875 [  10345]   INFO - intellij.util.io.FilePageCache - lower=100; upper=492; buffer=10; max=492 
+2022-04-27 21:39:32,163 [  10633]   INFO - lij.diagnostic.DebugLogManager - Set TRACE for the following categories: #com.jetbrains.rdserver.requests, #com.jetbrains.rd.ide.document, #com.jetbrains.rdserver.document, #com.jetbrains.rdserver.editors, #com.jetbrains.rdserver.actions, #com.jetbrains.rdserver.permissions 
+2022-04-27 21:39:32,225 [  10695]   INFO - intellij.diagnostic.JitWatcher - JIT compilation state checking enabled 
+2022-04-27 21:39:32,248 [  10718]   INFO - til.net.ssl.CertificateManager - Default SSL context initialized 
+2022-04-27 21:39:32,756 [  11226]   INFO - penapi.application.Experiments - Experimental features enabled for user: wsl.p9.support, wsl.prefer.p9.support, wsl.p9.show.roots.in.file.chooser, wsl.execute.with.wsl.exe, linux.native.menu, recent.and.edited.files.together, show.create.new.element.in.popup, search.everywhere.mixed.results, editor.reader.mode, new.large.text.file.viewer, wsl.fsd.content.loader, reuse.target.paths.for.rsync 
+2022-04-27 21:39:32,883 [  11353]   INFO - impl.SharedIndexMainZipStorage - Shared Indexes Storage is opened and empty 
+2022-04-27 21:39:33,084 [  11554]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: com.intellij] 
+2022-04-27 21:39:33,106 [  11576]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: com.intellij] 
+2022-04-27 21:39:33,106 [  11576]   WARN - nSystem.impl.ActionManagerImpl - keymap "NetBeans 6.5" not found [Plugin: com.intellij] 
+2022-04-27 21:39:33,106 [  11576]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: com.intellij] 
+2022-04-27 21:39:33,114 [  11584]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse (Mac OS X)" not found [Plugin: com.intellij] 
+2022-04-27 21:39:33,263 [  11733]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: org.jetbrains.plugins.github] 
+2022-04-27 21:39:33,263 [  11733]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse (Mac OS X)" not found [Plugin: org.jetbrains.plugins.github] 
+2022-04-27 21:39:33,263 [  11733]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse (Mac OS X)" not found [Plugin: org.jetbrains.plugins.github] 
+2022-04-27 21:39:33,299 [  11769]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: HtmlTools] 
+2022-04-27 21:39:33,305 [  11775]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: JavaScript] 
+2022-04-27 21:39:33,306 [  11776]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: JavaScript] 
+2022-04-27 21:39:33,342 [  11812]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: Pythonid] 
+2022-04-27 21:39:33,342 [  11812]   WARN - nSystem.impl.ActionManagerImpl - keymap "NetBeans 6.5" not found [Plugin: Pythonid] 
+2022-04-27 21:39:33,348 [  11818]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: Pythonid] 
+2022-04-27 21:39:33,348 [  11818]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: Pythonid] 
+2022-04-27 21:39:33,420 [  11890]   WARN - tellij.ide.SystemHealthMonitor - issue detected: bundled.jre.m1.arch.message 
+2022-04-27 21:39:33,527 [  11997]   INFO - pl.local.NativeFileWatcherImpl - Starting file watcher: /Users/eva/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.2.4/3f7601d05f08ba58cd2a596c2d5ab893b99e5df4/pycharmPY-2021.2.4/bin/mac/fsnotifier 
+2022-04-27 21:39:33,554 [  12024]   INFO - pl.local.NativeFileWatcherImpl - Native file watcher is operational. 
+2022-04-27 21:39:33,599 [  12069]   INFO - penapi.application.Experiments - Experimental feature 'terminal.shell.command.handling' is now turned OFF 
+2022-04-27 21:39:33,624 [  12094]   WARN - l.NotificationGroupManagerImpl - Notification group CodeWithMe is already registered (group=com.intellij.notification.NotificationGroup@7f1a191b). Plugin descriptor: PluginDescriptor(name=Code With Me, id=com.jetbrains.codeWithMe, descriptorPath=plugin.xml, path=~/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.2.4/3f7601d05f08ba58cd2a596c2d5ab893b99e5df4/pycharmPY-2021.2.4/plugins/cwm-plugin, version=212.5712.39, package=null) 
+2022-04-27 21:39:33,640 [  12110]   INFO - cloudConfig.CloudConfigManager - === Start: JBA_NOT_CONNECTED (3ms) === 
+2022-04-27 21:39:33,734 [  12204]   INFO - ings.impl.UpdateCheckerService - channel: release 
+2022-04-27 21:39:33,737 [  12207]   INFO - m.intellij.ui.mac.touchbar.NST - touchbar-server isn't running, skip nst loading 
+2022-04-27 21:39:33,754 [  12224]   INFO - i.mac.touchbar.TouchbarSupport - touchbar support is enabled 
+2022-04-27 21:39:33,763 [  12233]   INFO - cloudConfig.CloudConfigManager - === Start.updateInitStatus === 
+2022-04-27 21:39:33,783 [  12253]   INFO - cloudConfig.CloudConfigManager - === calculateInitStatus === 
+2022-04-27 21:39:34,705 [  13175]   INFO - nfig.ETagCloudConfigFileClient - === Get cloud config URL: https://cloudconfig.jetbrains.com/cloudconfig/files === 
+2022-04-27 21:39:35,181 [  13651]   INFO - ntellij.ui.mac.screenmenu.Menu - use new ScreenMenuBar implementation 
+2022-04-27 21:39:35,548 [  14018]   INFO - cloudConfig.CloudConfigManager - === calculateInitStatus.value: JBA_NOT_CONNECTED === 
+2022-04-27 21:39:35,632 [  14102]   INFO - leBasedIndexDataInitialization - Index data initialization done: 3128 ms. Initialized indexes: [FilenameIndex, FrameworkDetectionIndex, TodoIndex, IdIndex, filetypes, Stubs, Trigram.Index, fileIncludes, DomFileIndex, RelaxSymbolIndex, XmlTagNames, XmlNamespaces, html5.custom.attributes.index, SchemaTypeInheritance, json.file.root.values, HashFragmentIndex, yaml.keys.name, docker.compose.services, editorconfig.index.name, PuppetFactsIndex, PuppetRubyPluginsIndex, CssIndex, css.template.selectors, CompassFunctionsIndex, HtmlTagIdIndex, xmlProperties, js.test.names, js.package.index, js.custom.single.entry.index, js.implicit.elements.index, js.string.literal.words.index, TypeScriptExternalPathCandidates, sql.types.count.index, sql.routine.index, http.request.execution.environment, http.request.completion.host, http.request.headers.values.index, Py.module.name, Py.setuptools.namespace, DjangoBlockInheritanceIndex, angularjs.template.cache, angularjs.ui.router.views.index, angularjs.app.index]. 
+2022-04-27 21:39:36,114 [  14584]   INFO - exImpl$StubIndexInitialization - Index data initialization done: 481 ms. Initialized stub indexes: {Css.id, angular2.templateUrl.index, dom.elementClass, ini.property.key, Python.Decorator, Css.attr, Py.variable.shortName, es6.assignment.index, es6.exported.index, Css.class, angular2.source.directive.index, dom.namespaceKey, angularjs.generic.modules.index, puppet.variable, Py.class.attributes, Py.class.super, Py.function.shortName, Py.module.attribute, puppet.top.variable, angular2.source.pipe.index, angular2.source.module.index, angularjs.templateUrl.index, angularjs.delimiter.index, Stylus.variables, js.qualified.shortName, Django.manager, puppet.class, Py.class.shortNameInsensitive, angular2.ivy.directive.index, amd.baseUrl.index, js.global.symbol.index, ts.embedded.content.index, angular2.metadata.function.index, sql.names, properties.index, js.lazy.packages, Css.ampersand.selector, Css.custom.property, Scss.function, JS.subclass.stub.index, Less.mixins, js.namespace.index, JS.base.types.index, JS.custom.stub.index, JS.class.super, JS.global.qualified.elements, js.typedef.index2, js.local.namespace.members.index, js.amd.modules, puppet.resource, angular2.metadata.className.index, Scss.placeholder.selector, Scss.variable, puppet.type, sql.table.shortName, angular2.metadata.pipe.index, angular2.metadata.directive.index, puppet.resource.by.type, js.doc.modules, puppet.class.instantiation, sql.column.name, angular2.ivy.module.index, puppet.function, angular2.metadata.node.index, angularjs.directives.doc.index, puppet.subclass, angularjs.directives.index, angularjs.module.index, angularjs.filter.index, angularjs.controller.index, angularjs.symbol.index, angularjs.ui.router.states.index, js.nonglobal.symbol.index, angularjs.ui.router.generic.states.index, Py.class.shortName, Django.foreignKey, amd.requirePaths.index, puppet.namespace, angular2.ivy.pipe.index, Stylus.mixins, Css.custom.mixin, puppet.node, angular2.metadata.module.index, markdown.header, js.gcl.modules, ts.local.classes, js.exported.index, js.class.index2, js.symbol.qualified.names.index, Less.variables, Scss.mixin, js.element.qualifiedName, JS.class.implements, js.symbol.index2, js.generics.index, ts.external.module.index, js.imported.bindings.index}. 
+2022-04-27 21:39:36,786 [  15256]   INFO - plication.impl.ApplicationImpl - LONG VFS PROCESSING. Topic=BulkFileListener, offender=class org.jetbrains.plugins.notebooks.core.impl.file.NotebookFileChangeListener, message=after, time=566ms 
+2022-04-27 21:39:37,884 [  16354]   INFO - cloudConfig.CloudConfigManager - === End.updateInitStatus === 
+2022-04-27 21:39:38,574 [  17044]   INFO - lij.diagnostic.DebugLogManager - Set TRACE for the following categories: #com.jetbrains.rdserver.requests, #com.jetbrains.rd.ide.document, #com.jetbrains.rdserver.document, #com.jetbrains.rdserver.editors, #com.jetbrains.rdserver.actions, #com.jetbrains.rdserver.permissions 
+2022-04-27 21:39:38,821 [  17291]   INFO - tests.impl.DistributedTestHost - Host address=localhost/127.0.0.1 
+2022-04-27 21:39:39,250 [  17720]   INFO - rojectCodeStyleSettingsManager - Initialized from default code style settings. 
+2022-04-27 21:39:39,260 [  17730]   INFO - el.ide.impl.WorkspaceModelImpl - Load workspace model from cache in 617 ms 
+2022-04-27 21:39:39,602 [  18072]   INFO - ins.rd.platform.codeWithMe.a.g - sessionStatus: null 
+2022-04-27 21:39:39,603 [  18073]   INFO - ins.rd.platform.codeWithMe.a.g - freeSessionRemainingTimeMs: null null 
+2022-04-27 21:39:39,956 [  18426]   INFO - ar.ExperimentalToolbarSettings - Loading old state, main toolbar: false navBar true 
+2022-04-27 21:39:41,141 [  19611]   INFO -              PerformancePlugin - Performance Plugin is in silent mode 
+2022-04-27 21:39:42,045 [  20515]   INFO - erver.followMe.FollowMeManager - Register new user 0:'eva' with ClientId=ClientId(value=Host) 
+2022-04-27 21:39:42,452 [  20922]   INFO - ion.DelayedProjectSynchronizer - Workspace model loaded from cache. Syncing real project state into workspace model in 1181 ms. Thread[JobScheduler FJ pool 0/7,4,main] 
+2022-04-27 21:39:42,694 [  21164]   INFO - roject.DumbServiceGuiTaskQueue - Running dumb mode task: OnDiskSharedIndexChunkLocator 
+2022-04-27 21:39:42,704 [  21174]   INFO - roject.DumbServiceGuiTaskQueue - Running dumb mode task: UnindexedFilesUpdater[pythonProject] 
+2022-04-27 21:39:42,750 [  21220]   INFO - ge.ExternalProjectsDataStorage - Load external projects data in 6 millis (read time: 2) 
+2022-04-27 21:39:42,957 [  21427]   INFO - ramework.util.RdCoroutineScope - RdCoroutineHost overridden 
+2022-04-27 21:39:43,305 [  21775]   INFO - ij.psi.search.LogFileTypeIndex - Loading file type index snapshot 
+2022-04-27 21:39:43,347 [  21817]   INFO - indexing.UnindexedFilesUpdater - Started indexing of pythonProject. Reason: On project open 
+2022-04-27 21:39:43,378 [  21848]   INFO - indexing.UnindexedFilesUpdater - Performing delayed pushing properties tasks for pythonProject took 1ms; general responsiveness: ok; EDT responsiveness: ok 
+2022-04-27 21:39:43,445 [  21915]   INFO - redIndexChunkConfigurationImpl - Chunk bundled-js-predefined-ffdd448c697d-34490f0bdf90-JavaScript-PY-212.5712.39 is registered for project 'pythonProject: matching: (fb=33, stub=75), incompatible: (fb=0, stub=0), unknown: (fb=9, stub=9),  
+2022-04-27 21:39:43,468 [  21938]   INFO - indexing.UnindexedFilesUpdater - Scanning of pythonProject uses 7 scanning threads 
+2022-04-27 21:39:43,742 [  22212]   INFO - llij.database.util.SqlDialects - SQL dialects initialized in 2 ms 
+2022-04-27 21:39:43,836 [  22306]   INFO - oudConfig.StatusBarInfoManager - === StatusBar.start create === 
+2022-04-27 21:39:44,541 [  23011]   INFO - redIndexChunkConfigurationImpl - Chunk bundled-python-sdk-b84083ee875f-cf9a850f160f-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-212.5712.39 is registered for project 'pythonProject: matching: (fb=38, stub=97), incompatible: (fb=0, stub=0), unknown: (fb=9, stub=9),  
+2022-04-27 21:39:44,555 [  23025]   INFO - SharedIndexPostStartupActivity - Attached 2 pre-built shared indexes: bundled-js-predefined-ffdd448c697d-34490f0bdf90-JavaScript-PY-212.5712.39, bundled-python-sdk-b84083ee875f-cf9a850f160f-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-212.5712.39 
+2022-04-27 21:39:44,693 [  23163]   INFO - ProjectRootPostStartUpActivity - /Users/eva/PycharmProjects/pythonProject/.idea case-sensitivity: expected=false actual=false 
+2022-04-27 21:39:44,739 [  23209]   INFO - j.ide.script.IdeStartupScripts - 0 startup script(s) found 
+2022-04-27 21:39:44,913 [  23383]   INFO - .diagnostic.PerformanceWatcher - Post-startup activities under progress took 3610ms; general responsiveness: ok; EDT responsiveness: 1/3 sluggish, 1/3 very slow 
+2022-04-27 21:39:45,233 [  23703]   INFO - indexing.UnindexedFilesUpdater - Scanning completed for pythonProject. Number of scanned files: 325; Number of files for indexing: 0 took 1854ms; general responsiveness: ok; EDT responsiveness: ok 
+2022-04-27 21:39:45,247 [  23717]   INFO - indexing.UnindexedFilesUpdater - Finished for pythonProject. No files to index with loading content. 
+2022-04-27 21:39:45,250 [  23720]   INFO - ij.psi.search.LogFileTypeIndex - File type index snapshot dropped 
+2022-04-27 21:39:45,955 [  24425]   INFO - penapi.project.DumbServiceImpl - updateFinished 
+2022-04-27 21:39:45,968 [  24438]   INFO - tFileBasedIndexStartupActivity - Has changed files: false; project=Project(name=pythonProject, containerState=COMPONENT_CREATED, componentStore=/Users/eva/PycharmProjects/pythonProject) 
+2022-04-27 21:39:45,997 [  24467]   INFO - .services.SpaceKtsFileDetector - SpaceKtsFileDetector 
+2022-04-27 21:39:46,156 [  24626]   INFO - tor.impl.FileEditorManagerImpl - Project opening took 7781 ms 
+2022-04-27 21:39:50,064 [  28534]   INFO - m.codeWithMe.CodeWithMeCleanup - running activity to cleanup old thin clients... Root path is '/Users/eva/Library/Caches/JetBrains' 
+2022-04-27 21:39:50,066 [  28536]   INFO - m.codeWithMe.CodeWithMeCleanup - found 0 Code With Me client system folders to check 
+2022-04-27 21:39:50,067 [  28537]   INFO - m.codeWithMe.CodeWithMeCleanup - found 0 Code With Me client config folders to check 
+2022-04-27 21:39:50,068 [  28538]   INFO - m.codeWithMe.CodeWithMeCleanup - keep only [] major versions 
+2022-04-27 21:39:54,956 [  33426]   INFO - System.impl.PopupMenuPreloader - Popup menu 'File' preloaded at 'MainMenu' in 161 ms 
+2022-04-27 21:39:55,018 [  33488]   INFO - System.impl.PopupMenuPreloader - Popup menu 'Edit' preloaded at 'MainMenu' in 234 ms 
+2022-04-27 21:39:55,222 [  33692]   INFO - System.impl.PopupMenuPreloader - Popup menu 'View' preloaded at 'MainMenu' in 430 ms 
+2022-04-27 21:39:55,320 [  33790]   INFO - System.impl.PopupMenuPreloader - Popup menu 'Navigate' preloaded at 'MainMenu' in 524 ms 
+2022-04-27 21:39:55,362 [  33832]   INFO - System.impl.PopupMenuPreloader - Popup menu 'Code' preloaded at 'MainMenu' in 565 ms 
+2022-04-27 21:39:55,475 [  33945]   INFO - System.impl.PopupMenuPreloader - Popup menu 'Run' preloaded at 'MainMenu' in 677 ms 
+2022-04-27 21:39:55,501 [  33971]   INFO - System.impl.PopupMenuPreloader - Popup menu 'Refactor' preloaded at 'MainMenu' in 705 ms 
+2022-04-27 21:39:55,566 [  34036]   INFO - System.impl.PopupMenuPreloader - Popup menu 'Window' preloaded at 'MainMenu' in 769 ms 
+2022-04-27 21:39:55,646 [  34116]   INFO - System.impl.PopupMenuPreloader - Popup menu 'Help' preloaded at 'MainMenu' in 849 ms 
+2022-04-27 21:39:55,691 [  34161]   INFO - System.impl.PopupMenuPreloader - Popup menu 'Tools' preloaded at 'MainMenu' in 894 ms 
+2022-04-27 21:39:55,807 [  34277]   INFO - .script.IdeScriptEngineManager - javax.script.ScriptEngineManager initialized in 314 ms 
+2022-04-27 21:40:39,724 [  78194]   INFO - rationStore.ComponentStoreImpl - Saving Project(name=pythonProject, containerState=COMPONENT_CREATED, componentStore=/Users/eva/PycharmProjects/pythonProject)RunManager took 22 ms, XDebuggerManager took 13 ms 
+2022-04-27 21:40:39,861 [  78331]   INFO - erver.followMe.FollowMeManager - Unregister user 0:'eva' with ClientId=ClientId(value=Host) 
+2022-04-27 21:40:40,262 [  78732]   INFO - ication.options.PathMacrosImpl - Saved path macros: {} 
+2022-04-27 21:40:40,307 [  78777]   INFO - rationStore.ComponentStoreImpl - Saving appActionsLocalSummary took 12 ms, FileTypeManager took 37 ms 
+2022-04-27 21:40:42,970 [  81440]   INFO - rationStore.ComponentStoreImpl - Saving appFileTypeManager took 22 ms 
+2022-04-27 21:40:43,031 [  81501]   INFO - System.impl.PopupMenuPreloader - Popup menu 'Help' preloaded at 'MainMenu' in 38 ms 
+2022-04-27 21:40:43,036 [  81506]   INFO - System.impl.PopupMenuPreloader - Popup menu 'File' preloaded at 'MainMenu' in 55 ms 
+2022-04-27 21:41:12,804 [ 111274]   INFO - il.indexing.FileBasedIndexImpl - START INDEX SHUTDOWN 
+2022-04-27 21:41:12,927 [ 111397]   INFO - tellij.psi.stubs.StubIndexImpl - StubIndexExtension-s were unloaded 
+2022-04-27 21:41:12,991 [ 111461]   INFO - il.indexing.FileBasedIndexImpl - END INDEX SHUTDOWN 
+2022-04-27 21:41:12,997 [ 111467]   INFO - stubs.SerializationManagerImpl - Start shutting down /Users/eva/Desktop/regexps/regexp-helper-python/regexp_helper/build/idea-sandbox/system/index/rep.names 
+2022-04-27 21:41:12,998 [ 111468]   INFO - stubs.SerializationManagerImpl - Finished shutting down /Users/eva/Desktop/regexps/regexp-helper-python/regexp_helper/build/idea-sandbox/system/index/rep.names 
+2022-04-27 21:41:13,002 [ 111472]   INFO - newvfs.persistent.PersistentFS - VFS dispose started 
+2022-04-27 21:41:13,005 [ 111475]   INFO - newvfs.persistent.PersistentFS - VFS dispose completed 
+2022-04-27 21:41:13,005 [ 111475]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE SHUTDOWN ------------------------------------------------------ 
+2022-04-27 21:41:13,008 [ 111478]   INFO - org.jetbrains.io.BuiltInServer - web server stopped 
+2022-04-27 21:41:15,854 [      0]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE STARTED ------------------------------------------------------ 
+2022-04-27 21:41:15,906 [     52]   INFO - .intellij.util.EnvironmentUtil - loading shell env: /bin/bash -l -i -c '/Users/eva/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.2.4/3f7601d05f08ba58cd2a596c2d5ab893b99e5df4/pycharmPY-2021.2.4/bin/printenv' '/var/folders/0r/409ysjl52nn3h_0b9bgp9zxc0000gp/T/intellij-shell-env.549912548664469617.tmp' 
+2022-04-27 21:41:16,144 [    290]   INFO - .intellij.util.EnvironmentUtil - shell environment loaded (19 vars) 
+2022-04-27 21:41:16,290 [    436]   INFO -        #com.intellij.idea.Main - IDE: PyCharm (build #PY-212.5712.39, 21 Dec 2021 05:43) 
+2022-04-27 21:41:16,294 [    440]   INFO -        #com.intellij.idea.Main - OS: Mac OS X (12.3.1, x86_64) 
+2022-04-27 21:41:16,357 [    503]   INFO -        #com.intellij.idea.Main - JRE: 11.0.13+8-b1504.49 (JetBrains s.r.o.) 
+2022-04-27 21:41:16,360 [    506]   INFO -        #com.intellij.idea.Main - JVM: 11.0.13+8-b1504.49 (OpenJDK 64-Bit Server VM) 
+2022-04-27 21:41:16,363 [    509]   INFO -        #com.intellij.idea.Main - JVM Args: -Dapple.awt.fileDialogForDirectories=true -Dapple.laf.useScreenMenuBar=true -Didea.auto.reload.plugins=true -Didea.classpath.index.enabled=false -Didea.config.path=/Users/eva/Desktop/regexps/regexp-helper-python/regexp_helper/build/idea-sandbox/config -Didea.is.internal=true -Didea.platform.prefix=Python -Didea.plugins.path=/Users/eva/Desktop/regexps/regexp-helper-python/regexp_helper/build/idea-sandbox/plugins -Didea.required.plugins.id=org.intellij.sdk.regexp -Didea.smooth.progress=false -Didea.system.path=/Users/eva/Desktop/regexps/regexp-helper-python/regexp_helper/build/idea-sandbox/system -Xms256m -Xmx512m -Dfile.encoding=UTF-8 -Duser.country=RU -Duser.language=en -Duser.variant -ea 
+2022-04-27 21:41:16,364 [    510]   INFO -        #com.intellij.idea.Main - library path: /Users/eva/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:. 
+2022-04-27 21:41:16,364 [    510]   INFO -        #com.intellij.idea.Main - boot library path: /Users/eva/.gradle/caches/modules-2/files-2.1/com.jetbrains/jbre/jbr_jcef-11_0_13-osx-x64-b1504.49/extracted/jbr/Contents/Home/lib 
+2022-04-27 21:41:16,677 [    823]   INFO -        #com.intellij.idea.Main - locale=en_RU JNU=UTF-8 file.encoding=UTF-8
+  idea.config.path=/Users/eva/Desktop/regexps/regexp-helper-python/regexp_helper/build/idea-sandbox/config
+  idea.system.path=/Users/eva/Desktop/regexps/regexp-helper-python/regexp_helper/build/idea-sandbox/system
+  idea.plugins.path=/Users/eva/Desktop/regexps/regexp-helper-python/regexp_helper/build/idea-sandbox/plugins
+  idea.log.path=/Users/eva/Desktop/regexps/regexp-helper-python/regexp_helper/build/idea-sandbox/system/log 
+2022-04-27 21:41:16,731 [    877]   INFO -        #com.intellij.idea.Main - CPU cores: 8; ForkJoinPool.commonPool: java.util.concurrent.ForkJoinPool@b31d43b[Running, parallelism = 7, size = 7, active = 3, running = 3, steals = 4, tasks = 0, submissions = 0]; factory: com.intellij.concurrency.IdeaForkJoinWorkerThreadFactory@2fa9bfa6 
+2022-04-27 21:41:17,004 [   1150]   INFO -        #com.intellij.idea.Main - JNA library (64-bit) loaded in 262 ms 
+2022-04-27 21:41:17,611 [   1757]   WARN - i.mac.MacOSApplicationProvider - No URL bundle (CFBundleURLTypes) is defined in the main bundle.
+To be able to open external links, specify protocols in the app layout section of the build file.
+Example: args.urlSchemes = ["your-protocol"] will handle following links: your-protocol://open?file=file&line=line 
+2022-04-27 21:41:22,910 [   7056]   INFO - e.plugins.DisabledPluginsState - Plugins to enable: [com.jetbrains.codeWithMe] 
+2022-04-27 21:41:23,032 [   7178]   INFO - llij.ide.plugins.PluginManager - Loaded bundled plugins: IDEA CORE (212.5712.39), Mercurial (212.5712.39), Machine Learning Code Completion (212.5712.39), IDE Settings Sync (212.5712.39), Perforce Helix Core (212.5712.39), Subversion (212.5712.39), GNU GetText files support (*.po) (212.5712.39), IntelliLang (212.5712.39), Gherkin (212.5712.39), Terminal (212.5712.39), Git (212.5712.39), ChangeReminder (212.5712.39), FTP/SFTP Connectivity (ex. Remote Hosts Access) (212.5712.39), YAML (212.5712.39), Docker (212.5712.39), IDE Features Trainer (212.5712.39), IDE Features Trainer: Git Lessons (212.5712.39), Task Management (212.5712.39), Time Tracking (212.5712.39), macOS Light Theme (212.5712.39), Performance Testing (212.5712.39), Performance Testing (Dynamic Plugins) (212.5712.39), Settings Repository (212.5712.39), SSH Remote Run (212.5712.39), WSL Support Framework (212.5712.39), Emoji Picker (212.5712.39), Copyright (212.5712.39), Shell Script (212.5712.39), Properties (212.5712.39), Diagrams (212.5712.39), Images (212.5712.39), Markdown (212.5712.39), Grazie (212.5712.39), GitHub (212.5712.39), Configuration Script (212.5712.39), Code With Me (212.5712.39), ReStructuredText (212.5712.39), HTML Tools (212.5712.39), Vagrant (212.5712.39), Puppet (212.5712.39), Ini (212.5712.39), Shared Indexes (212.5712.39), Shared Project Indexes (212.5712.39), Space (212.5712.39), Shared Indexes for Python (212.5712.39), EditorConfig (212.5712.39), TextMate Bundles (212.5712.39), Windows 10 Light Theme (212.5712.39), File Watchers (212.5712.39), CSS (212.5712.39), Less (212.5712.39), Sass (212.5712.39), Haml (212.5712.39), JavaScript and TypeScript (212.5712.39), TSLint (212.5712.39), Database Tools and SQL (212.5712.39), JavaScript Intention Power Pack (212.5712.39), JavaScript Debugger (212.5712.39), Python (212.5712.39), Datalore (0.1.13-212), PyCharm Professional Customization (212.5712.39), Shared Indexes for Python (212.5712.39), CoffeeScript (212.5712.39), Angular and AngularJS (212.5712.39), HTTP Client (212.5712.39), Stylus (212.5712.39), WSL File System Support (212.5712.39) 
+2022-04-27 21:41:23,032 [   7178]   INFO - llij.ide.plugins.PluginManager - Loaded custom plugins: RegexpHelper (0.1.0) 
+2022-04-27 21:41:25,713 [   9859]   INFO - ication.options.PathMacrosImpl - Loaded path macros: {} 
+2022-04-27 21:41:25,802 [   9948]   INFO - rains.ide.BuiltInServerManager - built-in server started, port 63343 
+2022-04-27 21:41:25,974 [  10120]   WARN - j.internal.DebugAttachDetector - Unable to start DebugAttachDetector, please add `--add-exports java.base/jdk.internal.vm=ALL-UNNAMED` to VM options 
+2022-04-27 21:41:26,052 [  10198]   INFO - intellij.util.io.FilePageCache - lower=100; upper=492; buffer=10; max=492 
+2022-04-27 21:41:26,439 [  10585]   INFO - lij.diagnostic.DebugLogManager - Set TRACE for the following categories: #com.jetbrains.rdserver.requests, #com.jetbrains.rd.ide.document, #com.jetbrains.rdserver.document, #com.jetbrains.rdserver.editors, #com.jetbrains.rdserver.actions, #com.jetbrains.rdserver.permissions 
+2022-04-27 21:41:26,469 [  10615]   INFO - til.net.ssl.CertificateManager - Default SSL context initialized 
+2022-04-27 21:41:26,695 [  10841]   INFO - intellij.diagnostic.JitWatcher - JIT compilation state checking enabled 
+2022-04-27 21:41:27,181 [  11327]   INFO - penapi.application.Experiments - Experimental features enabled for user: wsl.p9.support, wsl.prefer.p9.support, wsl.p9.show.roots.in.file.chooser, wsl.execute.with.wsl.exe, linux.native.menu, recent.and.edited.files.together, show.create.new.element.in.popup, search.everywhere.mixed.results, editor.reader.mode, new.large.text.file.viewer, reuse.target.paths.for.rsync, wsl.fsd.content.loader 
+2022-04-27 21:41:27,207 [  11353]   INFO - impl.SharedIndexMainZipStorage - Shared Indexes Storage is opened and empty 
+2022-04-27 21:41:27,492 [  11638]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: com.intellij] 
+2022-04-27 21:41:27,527 [  11673]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: com.intellij] 
+2022-04-27 21:41:27,527 [  11673]   WARN - nSystem.impl.ActionManagerImpl - keymap "NetBeans 6.5" not found [Plugin: com.intellij] 
+2022-04-27 21:41:27,527 [  11673]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: com.intellij] 
+2022-04-27 21:41:27,533 [  11679]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse (Mac OS X)" not found [Plugin: com.intellij] 
+2022-04-27 21:41:27,707 [  11853]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: org.jetbrains.plugins.github] 
+2022-04-27 21:41:27,707 [  11853]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse (Mac OS X)" not found [Plugin: org.jetbrains.plugins.github] 
+2022-04-27 21:41:27,708 [  11854]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse (Mac OS X)" not found [Plugin: org.jetbrains.plugins.github] 
+2022-04-27 21:41:27,795 [  11941]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: HtmlTools] 
+2022-04-27 21:41:27,820 [  11966]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: JavaScript] 
+2022-04-27 21:41:27,821 [  11967]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: JavaScript] 
+2022-04-27 21:41:27,860 [  12006]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: Pythonid] 
+2022-04-27 21:41:27,860 [  12006]   WARN - nSystem.impl.ActionManagerImpl - keymap "NetBeans 6.5" not found [Plugin: Pythonid] 
+2022-04-27 21:41:27,861 [  12007]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: Pythonid] 
+2022-04-27 21:41:27,864 [  12010]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: Pythonid] 
+2022-04-27 21:41:27,967 [  12113]   WARN - tellij.ide.SystemHealthMonitor - issue detected: bundled.jre.m1.arch.message 
+2022-04-27 21:41:28,093 [  12239]   INFO - pl.local.NativeFileWatcherImpl - Starting file watcher: /Users/eva/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.2.4/3f7601d05f08ba58cd2a596c2d5ab893b99e5df4/pycharmPY-2021.2.4/bin/mac/fsnotifier 
+2022-04-27 21:41:28,115 [  12261]   WARN - l.NotificationGroupManagerImpl - Notification group CodeWithMe is already registered (group=com.intellij.notification.NotificationGroup@69afbf0f). Plugin descriptor: PluginDescriptor(name=Code With Me, id=com.jetbrains.codeWithMe, descriptorPath=plugin.xml, path=~/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.2.4/3f7601d05f08ba58cd2a596c2d5ab893b99e5df4/pycharmPY-2021.2.4/plugins/cwm-plugin, version=212.5712.39, package=null) 
+2022-04-27 21:41:28,123 [  12269]   INFO - pl.local.NativeFileWatcherImpl - Native file watcher is operational. 
+2022-04-27 21:41:28,141 [  12287]   INFO - penapi.application.Experiments - Experimental feature 'terminal.shell.command.handling' is now turned OFF 
+2022-04-27 21:41:28,246 [  12392]   INFO - cloudConfig.CloudConfigManager - === Start: JBA_NOT_CONNECTED (1ms) === 
+2022-04-27 21:41:28,426 [  12572]   INFO - cloudConfig.CloudConfigManager - === Start.updateInitStatus === 
+2022-04-27 21:41:28,429 [  12575]   INFO - m.intellij.ui.mac.touchbar.NST - touchbar-server isn't running, skip nst loading 
+2022-04-27 21:41:28,430 [  12576]   INFO - ings.impl.UpdateCheckerService - channel: release 
+2022-04-27 21:41:28,447 [  12593]   INFO - i.mac.touchbar.TouchbarSupport - touchbar support is enabled 
+2022-04-27 21:41:28,452 [  12598]   INFO - cloudConfig.CloudConfigManager - === calculateInitStatus === 
+2022-04-27 21:41:29,548 [  13694]   INFO - nfig.ETagCloudConfigFileClient - === Get cloud config URL: https://cloudconfig.jetbrains.com/cloudconfig/files === 
+2022-04-27 21:41:30,270 [  14416]   INFO - ntellij.ui.mac.screenmenu.Menu - use new ScreenMenuBar implementation 
+2022-04-27 21:41:30,476 [  14622]   INFO - cloudConfig.CloudConfigManager - === calculateInitStatus.value: JBA_NOT_CONNECTED === 
+2022-04-27 21:41:30,531 [  14677]   INFO - leBasedIndexDataInitialization - Index data initialization done: 3513 ms. Initialized indexes: [FilenameIndex, FrameworkDetectionIndex, TodoIndex, IdIndex, filetypes, Stubs, Trigram.Index, fileIncludes, DomFileIndex, RelaxSymbolIndex, XmlTagNames, XmlNamespaces, html5.custom.attributes.index, SchemaTypeInheritance, json.file.root.values, HashFragmentIndex, yaml.keys.name, docker.compose.services, xmlProperties, HtmlTagIdIndex, PuppetFactsIndex, PuppetRubyPluginsIndex, editorconfig.index.name, CssIndex, css.template.selectors, CompassFunctionsIndex, js.test.names, js.package.index, js.custom.single.entry.index, js.implicit.elements.index, js.string.literal.words.index, TypeScriptExternalPathCandidates, sql.types.count.index, sql.routine.index, Py.module.name, Py.setuptools.namespace, DjangoBlockInheritanceIndex, angularjs.template.cache, angularjs.ui.router.views.index, angularjs.app.index, http.request.execution.environment, http.request.completion.host, http.request.headers.values.index]. 
+2022-04-27 21:41:30,899 [  15045]   INFO - exImpl$StubIndexInitialization - Index data initialization done: 367 ms. Initialized stub indexes: {Css.id, angular2.templateUrl.index, dom.elementClass, ini.property.key, Python.Decorator, Css.attr, Py.variable.shortName, es6.assignment.index, es6.exported.index, Css.class, angular2.source.directive.index, dom.namespaceKey, angularjs.generic.modules.index, puppet.variable, Py.class.attributes, Py.class.super, Py.function.shortName, Py.module.attribute, puppet.top.variable, angular2.source.pipe.index, angular2.source.module.index, angularjs.templateUrl.index, angularjs.delimiter.index, Stylus.variables, js.qualified.shortName, Django.manager, puppet.class, Py.class.shortNameInsensitive, angular2.ivy.directive.index, amd.baseUrl.index, js.global.symbol.index, ts.embedded.content.index, angular2.metadata.function.index, sql.names, properties.index, js.lazy.packages, Css.ampersand.selector, Css.custom.property, Scss.function, JS.subclass.stub.index, Less.mixins, js.namespace.index, JS.base.types.index, JS.custom.stub.index, JS.class.super, JS.global.qualified.elements, js.typedef.index2, js.local.namespace.members.index, js.amd.modules, puppet.resource, angular2.metadata.className.index, Scss.placeholder.selector, Scss.variable, puppet.type, sql.table.shortName, angular2.metadata.pipe.index, angular2.metadata.directive.index, puppet.resource.by.type, js.doc.modules, puppet.class.instantiation, sql.column.name, angular2.ivy.module.index, puppet.function, angular2.metadata.node.index, angularjs.directives.doc.index, puppet.subclass, angularjs.directives.index, angularjs.module.index, angularjs.filter.index, angularjs.controller.index, angularjs.symbol.index, angularjs.ui.router.states.index, js.nonglobal.symbol.index, angularjs.ui.router.generic.states.index, Py.class.shortName, Django.foreignKey, amd.requirePaths.index, puppet.namespace, angular2.ivy.pipe.index, Css.custom.mixin, puppet.node, Stylus.mixins, angular2.metadata.module.index, markdown.header, js.gcl.modules, ts.local.classes, js.exported.index, js.class.index2, js.symbol.qualified.names.index, Less.variables, Scss.mixin, js.element.qualifiedName, JS.class.implements, js.symbol.index2, js.generics.index, ts.external.module.index, js.imported.bindings.index}. 
+2022-04-27 21:41:31,633 [  15779]   INFO - plication.impl.ApplicationImpl - LONG VFS PROCESSING. Topic=BulkFileListener, offender=class org.jetbrains.plugins.notebooks.core.impl.file.NotebookFileChangeListener, message=after, time=582ms 
+2022-04-27 21:41:32,696 [  16842]   INFO - cloudConfig.CloudConfigManager - === End.updateInitStatus === 
+2022-04-27 21:41:34,883 [  19029]   INFO - System.impl.PopupMenuPreloader - Popup menu 'Help' preloaded at 'MainMenu' in 136 ms 
+2022-04-27 21:41:34,910 [  19056]   INFO - System.impl.PopupMenuPreloader - Popup menu 'File' preloaded at 'MainMenu' in 183 ms 
+2022-04-27 21:42:01,488 [  45634]   INFO - lij.diagnostic.DebugLogManager - Set TRACE for the following categories: #com.jetbrains.rdserver.requests, #com.jetbrains.rd.ide.document, #com.jetbrains.rdserver.document, #com.jetbrains.rdserver.editors, #com.jetbrains.rdserver.actions, #com.jetbrains.rdserver.permissions 
+2022-04-27 21:42:01,749 [  45895]   INFO - tests.impl.DistributedTestHost - Host address=localhost/127.0.0.1 
+2022-04-27 21:42:02,023 [  46169]   INFO - el.ide.impl.WorkspaceModelImpl - Load workspace model from cache in 493 ms 
+2022-04-27 21:42:02,155 [  46301]   INFO - rojectCodeStyleSettingsManager - Initialized from default code style settings. 
+2022-04-27 21:42:02,160 [  46306]   INFO - ins.rd.platform.codeWithMe.a.g - sessionStatus: null 
+2022-04-27 21:42:02,163 [  46309]   INFO - ins.rd.platform.codeWithMe.a.g - freeSessionRemainingTimeMs: null null 
+2022-04-27 21:42:02,465 [  46611]   INFO - ar.ExperimentalToolbarSettings - Loading old state, main toolbar: false navBar true 
+2022-04-27 21:42:03,501 [  47647]   INFO -              PerformancePlugin - Performance Plugin is in silent mode 
+2022-04-27 21:42:04,635 [  48781]   INFO - erver.followMe.FollowMeManager - Register new user 0:'eva' with ClientId=ClientId(value=Host) 
+2022-04-27 21:42:04,772 [  48918]   WARN - ctionSystem.impl.ActionUpdater - 1103 ms to expand group child OpenFile 
+2022-04-27 21:42:04,829 [  48975]   INFO - ion.DelayedProjectSynchronizer - Workspace model loaded from cache. Syncing real project state into workspace model in 1153 ms. Thread[JobScheduler FJ pool 0/7,4,main] 
+2022-04-27 21:42:04,990 [  49136]   INFO - roject.DumbServiceGuiTaskQueue - Running dumb mode task: OnDiskSharedIndexChunkLocator 
+2022-04-27 21:42:05,012 [  49158]   INFO - roject.DumbServiceGuiTaskQueue - Running dumb mode task: UnindexedFilesUpdater[pythonProject] 
+2022-04-27 21:42:05,118 [  49264]   INFO - ge.ExternalProjectsDataStorage - Load external projects data in 5 millis (read time: 2) 
+2022-04-27 21:42:05,330 [  49476]   INFO - ramework.util.RdCoroutineScope - RdCoroutineHost overridden 
+2022-04-27 21:42:05,570 [  49716]   INFO - ij.psi.search.LogFileTypeIndex - Loading file type index snapshot 
+2022-04-27 21:42:05,593 [  49739]   INFO - indexing.UnindexedFilesUpdater - Started indexing of pythonProject. Reason: On project open 
+2022-04-27 21:42:05,601 [  49747]   INFO - indexing.UnindexedFilesUpdater - Performing delayed pushing properties tasks for pythonProject took 2ms; general responsiveness: ok; EDT responsiveness: ok 
+2022-04-27 21:42:05,621 [  49767]   INFO - oudConfig.StatusBarInfoManager - === StatusBar.start create === 
+2022-04-27 21:42:05,629 [  49775]   INFO - redIndexChunkConfigurationImpl - Chunk bundled-python-sdk-b84083ee875f-cf9a850f160f-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-212.5712.39 is registered for project 'pythonProject: matching: (fb=38, stub=97), incompatible: (fb=0, stub=0), unknown: (fb=9, stub=9),  
+2022-04-27 21:42:05,661 [  49807]   INFO - indexing.UnindexedFilesUpdater - Scanning of pythonProject uses 7 scanning threads 
+2022-04-27 21:42:05,904 [  50050]   INFO - llij.database.util.SqlDialects - SQL dialects initialized in 4 ms 
+2022-04-27 21:42:06,162 [  50308]   INFO - redIndexChunkConfigurationImpl - Chunk bundled-js-predefined-ffdd448c697d-34490f0bdf90-JavaScript-PY-212.5712.39 is registered for project 'pythonProject: matching: (fb=33, stub=75), incompatible: (fb=0, stub=0), unknown: (fb=9, stub=9),  
+2022-04-27 21:42:06,262 [  50408]   INFO - SharedIndexPostStartupActivity - Attached 2 pre-built shared indexes: bundled-python-sdk-b84083ee875f-cf9a850f160f-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-212.5712.39, bundled-js-predefined-ffdd448c697d-34490f0bdf90-JavaScript-PY-212.5712.39 
+2022-04-27 21:42:06,364 [  50510]   INFO - ProjectRootPostStartUpActivity - /Users/eva/PycharmProjects/pythonProject/.idea case-sensitivity: expected=false actual=false 
+2022-04-27 21:42:06,376 [  50522]   INFO - j.ide.script.IdeStartupScripts - 0 startup script(s) found 
+2022-04-27 21:42:06,407 [  50553]   INFO - .diagnostic.PerformanceWatcher - Post-startup activities under progress took 2839ms; general responsiveness: ok; EDT responsiveness: 2/2 sluggish 
+2022-04-27 21:42:07,106 [  51252]   INFO - tor.impl.FileEditorManagerImpl - Project opening took 5757 ms 
+2022-04-27 21:42:07,137 [  51283]   INFO - indexing.UnindexedFilesUpdater - Scanning completed for pythonProject. Number of scanned files: 325; Number of files for indexing: 0 took 1535ms; general responsiveness: ok; EDT responsiveness: 1/1 sluggish 
+2022-04-27 21:42:07,151 [  51297]   INFO - indexing.UnindexedFilesUpdater - Finished for pythonProject. No files to index with loading content. 
+2022-04-27 21:42:07,153 [  51299]   INFO - ij.psi.search.LogFileTypeIndex - File type index snapshot dropped 
+2022-04-27 21:42:07,225 [  51371]   INFO - penapi.project.DumbServiceImpl - updateFinished 
+2022-04-27 21:42:07,247 [  51393]   INFO - tFileBasedIndexStartupActivity - Has changed files: false; project=Project(name=pythonProject, containerState=COMPONENT_CREATED, componentStore=/Users/eva/PycharmProjects/pythonProject) 
+2022-04-27 21:42:07,294 [  51440]   INFO - .services.SpaceKtsFileDetector - SpaceKtsFileDetector 
+2022-04-27 21:42:11,606 [  55752]   INFO - m.codeWithMe.CodeWithMeCleanup - running activity to cleanup old thin clients... Root path is '/Users/eva/Library/Caches/JetBrains' 
+2022-04-27 21:42:11,610 [  55756]   INFO - m.codeWithMe.CodeWithMeCleanup - found 0 Code With Me client system folders to check 
+2022-04-27 21:42:11,611 [  55757]   INFO - m.codeWithMe.CodeWithMeCleanup - found 0 Code With Me client config folders to check 
+2022-04-27 21:42:11,613 [  55759]   INFO - m.codeWithMe.CodeWithMeCleanup - keep only [] major versions 
+2022-04-27 21:42:20,360 [  64506]   INFO - System.impl.PopupMenuPreloader - Popup menu 'File' preloaded at 'MainMenu' in 76 ms 
+2022-04-27 21:42:20,523 [  64669]   INFO - System.impl.PopupMenuPreloader - Popup menu 'Edit' preloaded at 'MainMenu' in 236 ms 
+2022-04-27 21:42:20,551 [  64697]   INFO - System.impl.PopupMenuPreloader - Popup menu 'View' preloaded at 'MainMenu' in 263 ms 
+2022-04-27 21:42:20,826 [  64972]   INFO - System.impl.PopupMenuPreloader - Popup menu 'Code' preloaded at 'MainMenu' in 538 ms 
+2022-04-27 21:42:20,893 [  65039]   INFO - System.impl.PopupMenuPreloader - Popup menu 'Navigate' preloaded at 'MainMenu' in 605 ms 
+2022-04-27 21:42:20,988 [  65134]   INFO - System.impl.PopupMenuPreloader - Popup menu 'Run' preloaded at 'MainMenu' in 699 ms 
+2022-04-27 21:42:21,051 [  65197]   INFO - System.impl.PopupMenuPreloader - Popup menu 'Refactor' preloaded at 'MainMenu' in 762 ms 
+2022-04-27 21:42:21,092 [  65238]   INFO - System.impl.PopupMenuPreloader - Popup menu 'Window' preloaded at 'MainMenu' in 804 ms 
+2022-04-27 21:42:21,136 [  65282]   INFO - System.impl.PopupMenuPreloader - Popup menu 'Help' preloaded at 'MainMenu' in 847 ms 
+2022-04-27 21:42:21,183 [  65329]   INFO - System.impl.PopupMenuPreloader - Popup menu 'Tools' preloaded at 'MainMenu' in 894 ms 
+2022-04-27 21:42:21,291 [  65437]   INFO - .script.IdeScriptEngineManager - javax.script.ScriptEngineManager initialized in 278 ms 
+2022-04-27 21:42:38,635 [  82781]   INFO - rationStore.ComponentStoreImpl - Saving Project(name=pythonProject, containerState=COMPONENT_CREATED, componentStore=/Users/eva/PycharmProjects/pythonProject)RunManager took 30 ms, XDebuggerManager took 13 ms 
+2022-04-27 21:42:38,786 [  82932]   INFO - erver.followMe.FollowMeManager - Unregister user 0:'eva' with ClientId=ClientId(value=Host) 
+2022-04-27 21:42:39,121 [  83267]   INFO - ication.options.PathMacrosImpl - Saved path macros: {} 
+2022-04-27 21:42:39,168 [  83314]   INFO - rationStore.ComponentStoreImpl - Saving appFileTypeManager took 29 ms 
+2022-04-27 21:42:41,766 [  85912]   INFO - System.impl.PopupMenuPreloader - Popup menu 'Help' preloaded at 'MainMenu' in 28 ms 
+2022-04-27 21:42:41,770 [  85916]   INFO - System.impl.PopupMenuPreloader - Popup menu 'File' preloaded at 'MainMenu' in 33 ms 
+2022-04-27 21:42:42,269 [  86415]   INFO - rationStore.ComponentStoreImpl - Saving appFileTypeManager took 14 ms 
+2022-04-27 21:43:34,038 [ 138184]   INFO - il.indexing.FileBasedIndexImpl - START INDEX SHUTDOWN 
+2022-04-27 21:43:34,143 [ 138289]   INFO - tellij.psi.stubs.StubIndexImpl - StubIndexExtension-s were unloaded 
+2022-04-27 21:43:34,200 [ 138346]   INFO - il.indexing.FileBasedIndexImpl - END INDEX SHUTDOWN 
+2022-04-27 21:43:34,204 [ 138350]   INFO - stubs.SerializationManagerImpl - Start shutting down /Users/eva/Desktop/regexps/regexp-helper-python/regexp_helper/build/idea-sandbox/system/index/rep.names 
+2022-04-27 21:43:34,205 [ 138351]   INFO - stubs.SerializationManagerImpl - Finished shutting down /Users/eva/Desktop/regexps/regexp-helper-python/regexp_helper/build/idea-sandbox/system/index/rep.names 
+2022-04-27 21:43:34,209 [ 138355]   INFO - newvfs.persistent.PersistentFS - VFS dispose started 
+2022-04-27 21:43:34,217 [ 138363]   INFO - newvfs.persistent.PersistentFS - VFS dispose completed 
+2022-04-27 21:43:34,217 [ 138363]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE SHUTDOWN ------------------------------------------------------ 
+2022-04-27 21:43:34,220 [ 138366]   INFO - org.jetbrains.io.BuiltInServer - web server stopped 
