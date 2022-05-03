@@ -12,13 +12,17 @@
     <!-- Text to display as description on Preferences/Settings | Plugin page -->
     <description>
         <![CDATA[
-      The RegExp Helper plugin allows users
-      to write regular expressions on Python using
-      validation, and functionality to test already written code.
-    ]]>
-        <![CDATA[
-      This plugin also displays an explanation of the regular expressions.
-    ]]>
+    The RegExp Helper plugin allows users to write regular expressions on Python using validation, and functionality to test
+        already written code</a>.
+    <p>Includes functionality for regular expressions:
+    <ul>
+      <li>test</li>
+      <li>explanation</li>
+      <li>validation</li>
+    </ul>
+    </p>
+     Plugin designed to simplify the development of regular expressions.
+  ]]>
     </description>
     <change-notes>
         <![CDATA[
