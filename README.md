@@ -1,4 +1,4 @@
-# regexp-helper-python
+# regexp-explorer-python
 
 ### Plugin for PyCharm regular expressions
 
