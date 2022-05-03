@@ -32,8 +32,8 @@ public class RegExpToolWindow {
   private final Project project;
 
   private LanguageTextField myRegExpTextField;
-
   private EditorTextField myTestsTextField;
+
   private final List<RangeHighlighter> myTestsHighlights = new ArrayList<>();
 
   public RegExpToolWindow(ToolWindow toolWindow, Project project) {
@@ -42,8 +42,14 @@ public class RegExpToolWindow {
     usersRegExpLabel.setText("Your RegExp");
     testLabel.setText("Test strings");
     myRegExpTextField.setFontInheritedFromLAF(true);
+    myRegExpTextField.setToolTipText("regexp");
+    myTestsTextField.setFontInheritedFromLAF(true);
+    myTestsTextField.setOneLineMode(false);
+    myTestsTextField.setAutoscrolls(true);
+    myTestsTextField.setToolTipText("test");
     usersRegExpLabel.setLabelFor(myRegExpTextField);
     testLabel.setLabelFor(myTestsTextField);
+    myToolWindowContent.setBackground(toolWindow.getComponent().getBackground());
   }
   private void initializeRegExpTextField() {
     myRegExpTextField = new LanguageTextField(RegExpLanguage.INSTANCE, project, "", true) {
