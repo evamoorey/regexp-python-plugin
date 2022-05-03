@@ -9,17 +9,17 @@ import org.jetbrains.annotations.NotNull;
 
 public class RegExpToolWindowFactory implements ToolWindowFactory {
 
-  /**
-   * Create the tool window content.
-   *
-   * @param project    current project
-   * @param toolWindow current tool window
-   */
-  public void createToolWindowContent(@NotNull Project project, @NotNull ToolWindow toolWindow) {
-    RegExpToolWindow myToolWindow = new RegExpToolWindow(toolWindow, project);
-    ContentFactory contentFactory = ContentFactory.SERVICE.getInstance();
-    Content content = contentFactory.createContent(myToolWindow.getContent(), "", false);
-    toolWindow.getContentManager().addContent(content);
-  }
+    /**
+     * Create the tool window content.
+     *
+     * @param project    current project
+     * @param toolWindow current tool window
+     */
+    public void createToolWindowContent(@NotNull Project project, @NotNull ToolWindow toolWindow) {
+        RegExpToolWindow myToolWindow = new RegExpToolWindow(toolWindow, project);
+        ContentFactory contentFactory = ContentFactory.SERVICE.getInstance();
+        Content content = contentFactory.createContent(myToolWindow.getContent(), "", false);
+        toolWindow.getContentManager().addContent(content);
+    }
 
 }
