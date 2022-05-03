@@ -4,7 +4,7 @@
     <id>org.intellij.sdk.regexp</id>
 
     <!-- Text to display as name on Preferences/Settings | Plugin page -->
-    <name>RegexpHelper</name>
+    <name>Regexp Explorer</name>
 
     <!-- Requires the python plugin to run -->
     <depends>com.intellij.modules.python</depends>
@@ -12,7 +12,7 @@
     <!-- Text to display as description on Preferences/Settings | Plugin page -->
     <description>
         <![CDATA[
-    The RegExp Helper plugin allows users to write regular expressions on Python using validation, and functionality to test
+    The RegExp Explorer plugin allows users to write regular expressions on Python using validation, and functionality to test
         already written code</a>.
     <p>Includes functionality for regular expressions:
     <ul>
