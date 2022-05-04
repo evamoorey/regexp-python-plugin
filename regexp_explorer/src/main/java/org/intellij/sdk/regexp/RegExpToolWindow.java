@@ -33,6 +33,8 @@ public class RegExpToolWindow {
 
     private LanguageTextField myRegExpTextField;
     private EditorTextField myTestsTextField;
+    private JComboBox hintComboBox;
+    private JLabel hintField;
 
     private final List<RangeHighlighter> myTestsHighlights = new ArrayList<>();
 
