@@ -28,13 +28,13 @@ public class RegExpToolWindow {
     private JLabel usersRegExpLabel;
     private JLabel testLabel;
     private JPanel myToolWindowContent;
+    private JComboBox hintComboBox;
+    private JTextPane hintField;
 
     private final Project project;
 
     private LanguageTextField myRegExpTextField;
     private EditorTextField myTestsTextField;
-    private JComboBox hintComboBox;
-    private JLabel hintField;
 
     private final List<RangeHighlighter> myTestsHighlights = new ArrayList<>();
 
@@ -52,6 +52,15 @@ public class RegExpToolWindow {
         usersRegExpLabel.setLabelFor(myRegExpTextField);
         testLabel.setLabelFor(myTestsTextField);
         myToolWindowContent.setBackground(toolWindow.getComponent().getBackground());
+        initializeHintBox();
+    }
+
+    private void initializeHintBox() {
+        HintCreator creator = new HintCreator();
+        DefaultComboBoxModel model = new DefaultComboBoxModel(creator.getTypes().toArray());
+        hintField.setText(creator.getRegexpHint().get(0));
+        hintComboBox.setModel(model);
+        hintComboBox.addActionListener(e -> hintField.setText(creator.getRegexpHint().get(hintComboBox.getSelectedIndex())));
     }
 
     private void initializeRegExpTextField() {
