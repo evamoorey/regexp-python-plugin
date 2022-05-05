@@ -8,11 +8,13 @@ import com.intellij.openapi.editor.ex.EditorEx;
 import com.intellij.openapi.editor.markup.RangeHighlighter;
 import com.intellij.openapi.fileTypes.PlainTextFileType;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.project.ProjectManager;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.ui.EditorTextField;
 import com.intellij.ui.LanguageTextField;
 import org.intellij.lang.regexp.RegExpHighlighter;
 import org.intellij.lang.regexp.RegExpLanguage;
+import org.intellij.lang.regexp.intention.CheckRegExpForm;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
@@ -31,62 +33,33 @@ public class RegExpToolWindow {
     private JComboBox hintComboBox;
     private JTextPane hintField;
 
-    private final Project project;
+    private Project myProject;
 
     private LanguageTextField myRegExpTextField;
     private EditorTextField myTestsTextField;
 
-    private final List<RangeHighlighter> myTestsHighlights = new ArrayList<>();
+    private final List<RangeHighlighter> myTestsHighlights;
 
     public RegExpToolWindow(ToolWindow toolWindow, Project project) {
-        this.project = project;
+        this.myProject = project;
+        this.myTestsHighlights = new ArrayList<>();
         explanationLabel.setText("Regular expression explanation");
+
         usersRegExpLabel.setText("Your RegExp");
+        usersRegExpLabel.setLabelFor(myRegExpTextField);
+
         testLabel.setText("Test strings");
+        testLabel.setLabelFor(myTestsTextField);
+
         myRegExpTextField.setFontInheritedFromLAF(true);
-        myRegExpTextField.setToolTipText("regexp");
+
         myTestsTextField.setFontInheritedFromLAF(true);
         myTestsTextField.setOneLineMode(false);
         myTestsTextField.setAutoscrolls(true);
-        myTestsTextField.setToolTipText("test");
-        usersRegExpLabel.setLabelFor(myRegExpTextField);
-        testLabel.setLabelFor(myTestsTextField);
+
         myToolWindowContent.setBackground(toolWindow.getComponent().getBackground());
         initializeHintBox();
-    }
 
-    private void initializeHintBox() {
-        HintCreator creator = new HintCreator();
-        DefaultComboBoxModel model = new DefaultComboBoxModel(creator.getTypes().toArray());
-        hintField.setText(creator.getRegexpHint().get(0));
-        hintComboBox.setModel(model);
-        hintComboBox.addActionListener(e -> hintField.setText(creator.getRegexpHint().get(hintComboBox.getSelectedIndex())));
-    }
-
-    private void initializeRegExpTextField() {
-        myRegExpTextField = new LanguageTextField(RegExpLanguage.INSTANCE, project, "", true) {
-            @Override
-            public @NotNull EditorEx createEditor() {
-                EditorEx editor = super.createEditor();
-                editor.setHorizontalScrollbarVisible(true);
-                editor.setHorizontalScrollbarVisible(false);
-                editor.getSettings().setLineNumbersShown(false);
-                editor.getSettings().setAutoCodeFoldingEnabled(false);
-                editor.getSettings().setFoldingOutlineShown(false);
-                editor.getSettings().setAllowSingleLogicalLineFolding(false);
-
-                return editor;
-            }
-        };
-    }
-
-    private void initializeTestsTextField() {
-        myTestsTextField = new EditorTextField("sampleText", project, PlainTextFileType.INSTANCE);
-    }
-
-    private void createUIComponents() {
-        initializeRegExpTextField();
-        initializeTestsTextField();
         DocumentListener documentListener = new DocumentListener() {
             @Override
             public void documentChanged(@NotNull DocumentEvent event) {
@@ -98,8 +71,16 @@ public class RegExpToolWindow {
         myTestsTextField.addDocumentListener(documentListener);
     }
 
+    private void initializeHintBox() {
+        HintCreator creator = new HintCreator();
+        DefaultComboBoxModel model = new DefaultComboBoxModel(creator.getTypes().toArray());
+        hintField.setText(creator.getRegexpHint().get(0));
+        hintComboBox.setModel(model);
+        hintComboBox.addActionListener(e -> hintField.setText(creator.getRegexpHint().get(hintComboBox.getSelectedIndex())));
+    }
+
     private void updateTestsHighlights() {
-        HighlightManager highlightManager = HighlightManager.getInstance(project);
+        HighlightManager highlightManager = HighlightManager.getInstance(myProject);
 
         removeTestsHighlights(highlightManager);
 
@@ -143,5 +124,23 @@ public class RegExpToolWindow {
 
     public JPanel getContent() {
         return myToolWindowContent;
+    }
+
+    private void createUIComponents() {
+        myRegExpTextField = new LanguageTextField(RegExpLanguage.INSTANCE, this.myProject, "[22]TEXT(", false) {
+            @Override
+            public @NotNull EditorEx createEditor() {
+                EditorEx editor = super.createEditor();
+                editor.setHorizontalScrollbarVisible(true);
+                editor.setHorizontalScrollbarVisible(false);
+                editor.getSettings().setLineNumbersShown(false);
+                editor.getSettings().setAutoCodeFoldingEnabled(false);
+                editor.getSettings().setFoldingOutlineShown(false);
+                editor.getSettings().setAllowSingleLogicalLineFolding(false);
+                editor.putUserData(CheckRegExpForm.CHECK_REG_EXP_EDITOR, Boolean.TRUE);
+                return editor;
+            }
+        };
+        myTestsTextField = new EditorTextField("sampleText", myProject, PlainTextFileType.INSTANCE);
     }
 }
