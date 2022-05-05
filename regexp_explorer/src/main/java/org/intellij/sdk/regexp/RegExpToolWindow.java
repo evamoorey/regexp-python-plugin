@@ -1,6 +1,7 @@
 package org.intellij.sdk.regexp;
 
 import com.intellij.codeInsight.highlighting.HighlightManager;
+import com.intellij.icons.AllIcons;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.editor.event.DocumentEvent;
 import com.intellij.openapi.editor.event.DocumentListener;
@@ -11,6 +12,9 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.ui.EditorTextField;
 import com.intellij.ui.LanguageTextField;
+import com.intellij.ui.components.JBLabel;
+import com.intellij.ui.components.JBScrollBar;
+import com.intellij.util.ui.JBUI;
 import org.intellij.lang.regexp.RegExpHighlighter;
 import org.intellij.lang.regexp.RegExpLanguage;
 import org.intellij.lang.regexp.intention.CheckRegExpForm;
@@ -33,16 +37,23 @@ public class RegExpToolWindow {
     private JComboBox hintComboBox;
     private JPanel hintTable;
 
-    private Project myProject;
+    private final Project myProject;
 
     private LanguageTextField myRegExpTextField;
     private EditorTextField myTestsTextField;
+
+    private final JBLabel myRegExpIcon;
+    private final JBLabel myTestsIcon;
 
     private final List<RangeHighlighter> myTestsHighlights;
 
     public RegExpToolWindow(ToolWindow toolWindow, Project project) {
         this.myProject = project;
         this.myTestsHighlights = new ArrayList<>();
+
+        this.myRegExpIcon = new JBLabel();
+        this.myTestsIcon = new JBLabel();
+
         explanationLabel.setText("Regular expression explanation");
 
         usersRegExpLabel.setText("Your RegExp");
@@ -52,10 +63,12 @@ public class RegExpToolWindow {
         testLabel.setLabelFor(myTestsTextField);
 
         myRegExpTextField.setFontInheritedFromLAF(true);
+        addIcon(myRegExpTextField, myRegExpIcon);
 
         myTestsTextField.setFontInheritedFromLAF(true);
         myTestsTextField.setOneLineMode(false);
         myTestsTextField.setAutoscrolls(true);
+        addIcon(myTestsTextField, myTestsIcon);
 
         myToolWindowContent.setBackground(toolWindow.getComponent().getBackground());
         initializeHintTable();
@@ -69,6 +82,8 @@ public class RegExpToolWindow {
         };
         myRegExpTextField.addDocumentListener(documentListener);
         myTestsTextField.addDocumentListener(documentListener);
+
+        updateTestsHighlights();
     }
 
     private void initializeHintTable() {
@@ -110,18 +125,30 @@ public class RegExpToolWindow {
             return;
         }
 
+        myRegExpIcon.setIcon(null);
+        myRegExpIcon.setToolTipText(null);
+        myTestsIcon.setIcon(null);
+        myTestsIcon.setToolTipText(null);
+
         Pattern pattern;
         try {
             pattern = Pattern.compile(myRegExpTextField.getText());
         } catch (PatternSyntaxException ex) {
-            // regex error
-            // TODO description icon
-            //  ex.getDescription()
-            // ex.getIndex()
+            myRegExpIcon.setIcon(AllIcons.General.BalloonError);
+            myRegExpIcon.setToolTipText(ex.getDescription());
             return;
         }
 
         Matcher matcher = pattern.matcher(myTestsTextField.getText());
+        if (matcher.hitEnd()) {
+            myTestsIcon.setIcon(AllIcons.General.BalloonWarning);
+            myTestsIcon.setToolTipText("Incomplete");
+        }
+        if (matcher.find()) {
+            myRegExpIcon.setIcon(AllIcons.General.InspectionsOK);
+            myTestsIcon.setIcon(AllIcons.General.InspectionsOK);
+        }
+        matcher.reset();
         while (matcher.find()) {
             int start = matcher.start();
             int end = matcher.end();
@@ -137,6 +164,19 @@ public class RegExpToolWindow {
             }
             myTestsHighlights.clear();
         }
+    }
+
+    private void addIcon(EditorTextField textField, JBLabel icon) {
+        textField.addSettingsProvider(editor -> {
+            icon.setBorder(JBUI.Borders.emptyLeft(2));
+            final JScrollPane scrollPane = editor.getScrollPane();
+            scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+            scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+            final JScrollBar verticalScrollBar = scrollPane.getVerticalScrollBar();
+            verticalScrollBar.setBackground(editor.getBackgroundColor());
+            verticalScrollBar.add(JBScrollBar.LEADING, icon);
+            verticalScrollBar.setOpaque(true);
+        });
     }
 
     public JPanel getContent() {
