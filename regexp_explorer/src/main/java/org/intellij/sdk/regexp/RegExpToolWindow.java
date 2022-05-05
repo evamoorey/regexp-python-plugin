@@ -8,7 +8,6 @@ import com.intellij.openapi.editor.ex.EditorEx;
 import com.intellij.openapi.editor.markup.RangeHighlighter;
 import com.intellij.openapi.fileTypes.PlainTextFileType;
 import com.intellij.openapi.project.Project;
-import com.intellij.openapi.project.ProjectManager;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.ui.EditorTextField;
 import com.intellij.ui.LanguageTextField;
@@ -18,6 +17,7 @@ import org.intellij.lang.regexp.intention.CheckRegExpForm;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -31,7 +31,7 @@ public class RegExpToolWindow {
     private JLabel testLabel;
     private JPanel myToolWindowContent;
     private JComboBox hintComboBox;
-    private JTextPane hintField;
+    private JPanel hintTable;
 
     private Project myProject;
 
@@ -58,7 +58,7 @@ public class RegExpToolWindow {
         myTestsTextField.setAutoscrolls(true);
 
         myToolWindowContent.setBackground(toolWindow.getComponent().getBackground());
-        initializeHintBox();
+        initializeHintTable();
 
         DocumentListener documentListener = new DocumentListener() {
             @Override
@@ -71,12 +71,29 @@ public class RegExpToolWindow {
         myTestsTextField.addDocumentListener(documentListener);
     }
 
-    private void initializeHintBox() {
+    private void initializeHintTable() {
         HintCreator creator = new HintCreator();
-        DefaultComboBoxModel model = new DefaultComboBoxModel(creator.getTypes().toArray());
-        hintField.setText(creator.getRegexpHint().get(0));
-        hintComboBox.setModel(model);
-        hintComboBox.addActionListener(e -> hintField.setText(creator.getRegexpHint().get(hintComboBox.getSelectedIndex())));
+        hintComboBox.setModel(new DefaultComboBoxModel(creator.getTypes().toArray()));
+
+        hintTable.setLayout(new GridLayout(creator.getRegexpHint(0).length, creator.getRegexpHint(0)[0].length, 5, 5));
+        for (int i = 0; i < creator.getRegexpHint(0).length; i++) {
+            for (int j = 0; j < creator.getRegexpHint(0)[0].length; j++) {
+                hintTable.add(creator.getRegexpHint(0)[i][j]);
+            }
+        }
+        hintTable.updateUI();
+
+        hintComboBox.addActionListener(e -> {
+            hintTable.removeAll();
+            hintTable.setLayout(new GridLayout(creator.getRegexpHint(hintComboBox.getSelectedIndex()).length,
+                    creator.getRegexpHint(hintComboBox.getSelectedIndex())[0].length, 5, 5));
+            for (int i = 0; i < creator.getRegexpHint(hintComboBox.getSelectedIndex()).length; i++) {
+                for (int j = 0; j < creator.getRegexpHint(hintComboBox.getSelectedIndex())[0].length; j++) {
+                    hintTable.add(creator.getRegexpHint(hintComboBox.getSelectedIndex())[i][j]);
+                }
+            }
+            hintTable.updateUI();
+        });
     }
 
     private void updateTestsHighlights() {

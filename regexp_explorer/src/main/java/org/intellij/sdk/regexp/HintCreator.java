@@ -1,6 +1,8 @@
 package org.intellij.sdk.regexp;
 
+import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -10,13 +12,11 @@ public class HintCreator {
 
     private List<String> types;
 
-    private List<String> regexpHint;
+    private JTextArea[][] regexpHint;
 
     public HintCreator() {
-        regexpHint = new ArrayList<>(5);
+        regexpHint = new JTextArea[5][2];
         types = createTypes();
-        initializeRegexpHint();
-        initializeRegexpHintSecond();
     }
 
     public List<String> getTypes() {
@@ -33,44 +33,83 @@ public class HintCreator {
         return types;
     }
 
-    private void initializeRegexpHint() {
-        StringBuilder build = new StringBuilder();
-        build.append(".        any character except newline\n");
-        build.append("\\w\\d\\s        word, digit, whitespace\n");
-        build.append("\\W\\D\\S    not word, digit, whitespace\n");
-        build.append("[abc]               any of a, b, or c\n");
-        build.append("[^abc]                 not a, b, or c\n");
-        build.append("[a-g]       character between a & g\n\n");
-        regexpHint.add(build.toString());
-        build = new StringBuilder();
-        build.append("^abc$       start / end of the string\n");
-        build.append("\\b\\B          word, not-word boundary\n");
-        regexpHint.add(build.toString());
-        build = new StringBuilder();
-        build.append("\\.\\*\\\\     escaped special characters\n");
-        build.append("\\t\\n\\r    tab,linefeed,carriage return\n");
-        regexpHint.add(build.toString());
+    private void initializeRegexpHint(int index) {
+        switch (index) {
+            case 0: {
+                regexpHint = new JTextArea[6][2];
+                regexpHint[0] = new JTextArea[]{new JTextArea("."), new JTextArea("any character    \nexcept newline")};
+                regexpHint[1] = new JTextArea[]{new JTextArea("\\w\\d\\s"), new JTextArea("word, digit,     \nwhitespace")};
+                regexpHint[2] = new JTextArea[]{new JTextArea("\\W\\D\\S"), new JTextArea("not word, digit, \nwhitespace")};
+                regexpHint[3] = new JTextArea[]{new JTextArea("[abc]"), new JTextArea("any of a, b, or c")};
+                regexpHint[4] = new JTextArea[]{new JTextArea("[^abc]"), new JTextArea("not a, b, or c")};
+                regexpHint[5] = new JTextArea[]{new JTextArea("[a-g]"), new JTextArea("character between\na & g")};
+                break;
+            }
+            case 1: {
+                regexpHint = new JTextArea[6][2];
+                regexpHint[0] = new JTextArea[]{new JTextArea("^abc$"), new JTextArea("start / end of   \nthe string")};
+                regexpHint[1] = new JTextArea[]{new JTextArea("\\b\\B"), new JTextArea("word, not-word   \nboundary")};
+                for (int i = 2; i < 6; i++) {
+                    regexpHint[i] = new JTextArea[]{new JTextArea(""), new JTextArea("")};
+                }
+                break;
+            }
+            case 2: {
+                regexpHint = new JTextArea[6][2];
+                regexpHint[0] = new JTextArea[]{new JTextArea("\\.\\*\\\\"), new JTextArea("escaped special  \ncharacters")};
+                regexpHint[1] = new JTextArea[]{new JTextArea("\\t\\n\\r"), new JTextArea("tab, linefeed,   \ncarriage return")};
+                for (int i = 2; i < 6; i++) {
+                    regexpHint[i] = new JTextArea[]{new JTextArea(""), new JTextArea("")};
+                }
+                break;
+            }
+        }
     }
 
-    private void initializeRegexpHintSecond() {
-        StringBuilder build = new StringBuilder();
-        build.append("(abc)                   capture group\n");
-        build.append("\\1          backreference to group #1\n");
-        build.append("(?:abc)           non-capturing group\n");
-        build.append("(?=abc)            positive lookahead\n");
-        build.append("(?!abc)            negative lookahead\n");
-        regexpHint.add(build.toString());
-        build = new StringBuilder();
-        build.append("a*a+a?   0 or more, 1 or more, 0 or 1\n");
-        build.append("a{5}a{2,}    exactly five, two or more\n");
-        build.append("a{1,3}              between one & three\n");
-        build.append("a+?a{2,}?    match as few as possible\n");
-        build.append("ab|cd                      match ab or cd\n");
-        regexpHint.add(build.toString());
+    private void initializeRegexpHintSecond(int index) {
+        switch (index) {
+            case 3: {
+                regexpHint = new JTextArea[6][2];
+                regexpHint[0] = new JTextArea[]{new JTextArea("(abc)"), new JTextArea("capture group    ")};
+                regexpHint[1] = new JTextArea[]{new JTextArea("\\1"), new JTextArea("backreference to \ngroup #1")};
+                regexpHint[2] = new JTextArea[]{new JTextArea("(?:abc)"), new JTextArea("non-capturing    \ngroup")};
+                regexpHint[3] = new JTextArea[]{new JTextArea("(?=abc)"), new JTextArea("positive\nlookahead")};
+                regexpHint[4] = new JTextArea[]{new JTextArea("(?!abc)"), new JTextArea("negative\nlookahead")};
+                regexpHint[5] = new JTextArea[]{new JTextArea(""), new JTextArea("")};
+                break;
+            }
+            case 4: {
+                regexpHint = new JTextArea[6][2];
+                regexpHint[0] = new JTextArea[]{new JTextArea("a*a+a?"), new JTextArea("0 or more, 1 or  \nmore, 0 or 1")};
+                regexpHint[1] = new JTextArea[]{new JTextArea("a{5}a{2,}"), new JTextArea("exactly five,two\nor more")};
+                regexpHint[2] = new JTextArea[]{new JTextArea("a{1,3}"), new JTextArea("between one &    \nthree")};
+                regexpHint[3] = new JTextArea[]{new JTextArea("a+?a{2,}"), new JTextArea("match as few as  \npossible")};
+                regexpHint[4] = new JTextArea[]{new JTextArea("ab|cd"), new JTextArea("match ab or cd")};
+                regexpHint[5] = new JTextArea[]{new JTextArea(""), new JTextArea("")};
+                break;
+            }
+        }
     }
 
-
-    public List<String> getRegexpHint() {
+    public JTextArea[][] getRegexpHint(int index) {
+        switch (index) {
+            case 0: {
+                initializeRegexpHint(index);
+            }
+            case 1: {
+                initializeRegexpHint(index);
+            }
+            case 2: {
+                initializeRegexpHint(index);
+            }
+            case 3: {
+                initializeRegexpHintSecond(index);
+            }
+            case 4: {
+                initializeRegexpHintSecond(index);
+            }
+        }
+        Arrays.stream(regexpHint).forEach(jTextAreas -> Arrays.stream(jTextAreas).forEach(jTextArea -> jTextArea.setEditable(false)));
         return regexpHint;
     }
 }
