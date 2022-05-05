@@ -140,13 +140,13 @@ public class RegExpToolWindow {
         }
 
         Matcher matcher = pattern.matcher(myTestsTextField.getText());
-        if (matcher.hitEnd()) {
-            myTestsIcon.setIcon(AllIcons.General.BalloonWarning);
-            myTestsIcon.setToolTipText("Incomplete");
-        }
         if (matcher.find()) {
             myRegExpIcon.setIcon(AllIcons.General.InspectionsOK);
             myTestsIcon.setIcon(AllIcons.General.InspectionsOK);
+        }
+        if (matcher.hitEnd()) {
+            myTestsIcon.setIcon(AllIcons.General.BalloonWarning);
+            myTestsIcon.setToolTipText("Incomplete");
         }
         matcher.reset();
         while (matcher.find()) {
