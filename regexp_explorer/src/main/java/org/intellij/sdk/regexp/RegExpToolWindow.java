@@ -3,6 +3,9 @@ package org.intellij.sdk.regexp;
 import com.intellij.codeInsight.highlighting.HighlightManager;
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.Disposable;
+import com.intellij.openapi.actionSystem.AnAction;
+import com.intellij.openapi.actionSystem.AnActionEvent;
+import com.intellij.openapi.actionSystem.CustomShortcutSet;
 import com.intellij.openapi.application.Application;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.editor.Editor;
@@ -13,6 +16,7 @@ import com.intellij.openapi.editor.markup.RangeHighlighter;
 import com.intellij.openapi.fileTypes.PlainTextFileType;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.Disposer;
+import com.intellij.openapi.wm.IdeFocusManager;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.ui.EditorTextField;
 ;
@@ -83,6 +87,9 @@ public class RegExpToolWindow {
         myTestsTextField.setAutoscrolls(true);
         addIcon(myTestsTextField, myTestsIcon);
 
+        registerFocusShortcut(myRegExpTextField, "shift TAB", myTestsTextField);
+        registerFocusShortcut(myTestsTextField, "shift TAB", myRegExpTextField);
+
         myToolWindowContent.setBackground(toolWindow.getComponent().getBackground());
         initializeHintTable();
 
@@ -105,6 +112,16 @@ public class RegExpToolWindow {
     private void updateAll() {
         alarm.cancelAllRequests();
         alarm.addRequest(() -> ApplicationManager.getApplication().invokeLater(this::updateTestsHighlights, __ -> alarm.isDisposed()), 0);
+    }
+
+    private void registerFocusShortcut(JComponent source, String shortcut, EditorTextField target) {
+        final AnAction action = new AnAction() {
+            @Override
+            public void actionPerformed(@NotNull AnActionEvent e) {
+                IdeFocusManager.findInstance().requestFocus(target.getFocusTarget(), true);
+            }
+        };
+        action.registerCustomShortcutSet(CustomShortcutSet.fromString(shortcut), source);
     }
 
     private void initializeHintTable() {
