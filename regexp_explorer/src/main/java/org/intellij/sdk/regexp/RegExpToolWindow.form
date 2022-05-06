@@ -67,7 +67,7 @@
                 </constraints>
                 <properties>
                   <actionCommand value="Multiline"/>
-                  <label value="Multiline"/>
+                  <label value="[teststring.checkbox.multiline.text / toolwindow/toolwindow]"/>
                   <selected value="true"/>
                   <text resource-bundle="toolwindow/toolwindow" key="teststring.checkbox.multiline.text"/>
                   <toolTipText resource-bundle="toolwindow/toolwindow" key="teststring.checkbox.multiline.tooltip"/>
@@ -90,9 +90,13 @@
               <splitpane position="right"/>
             </constraints>
             <properties>
-              <dividerLocation value="600"/>
+              <dividerLocation value="300"/>
               <dividerSize value="4"/>
+              <focusable value="true"/>
+              <lastDividerLocation value="300"/>
+              <oneTouchExpandable value="false"/>
               <orientation value="0"/>
+              <preferredSize width="336" height="547"/>
             </properties>
             <border type="empty"/>
             <children>
@@ -101,7 +105,11 @@
                 <constraints>
                   <splitpane position="left"/>
                 </constraints>
-                <properties/>
+                <properties>
+                  <maximumSize width="12312312" height="12312312"/>
+                  <minimumSize width="311" height="57"/>
+                  <preferredSize width="311" height="447"/>
+                </properties>
                 <border type="none"/>
                 <children>
                   <scrollpane id="94954" class="com.intellij.ui.components.JBScrollPane">
