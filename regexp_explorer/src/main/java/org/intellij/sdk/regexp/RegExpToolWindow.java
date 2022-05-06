@@ -277,8 +277,10 @@ public class RegExpToolWindow {
         FileType regexFileType = RegExpLanguage.INSTANCE.getAssociatedFileType();
         String ext = "regex";
         final PsiFile psiFile = PsiFileFactory.getInstance(myProject).createFileFromText("Dummy." + ext, regexFileType, myRegExpTextField.getText());
+        //noinspection UnstableApiUsage
         ((ViewerTreeStructure)myPsiTreeBuilder.getTreeStructure()).setRootPsiElement((PsiElement) Arrays.stream(psiFile.getChildren()).toArray()[0]);
 
+        //noinspection UnstableApiUsage
         myPsiTreeBuilder.queueUpdate();
 
         for (int i = 0; i < myPsiTree.getRowCount(); i++) {

@@ -20,7 +20,7 @@ public class HintCreator {
     }
 
     public List<String> getTypes() {
-        return types;
+        return new ArrayList<>(types);
     }
 
     private List<String> createTypes() {
