@@ -2,6 +2,9 @@ package org.intellij.sdk.regexp;
 
 import com.intellij.codeInsight.highlighting.HighlightManager;
 import com.intellij.icons.AllIcons;
+import com.intellij.openapi.Disposable;
+import com.intellij.openapi.application.Application;
+import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.editor.event.DocumentEvent;
 import com.intellij.openapi.editor.event.DocumentListener;
@@ -9,11 +12,14 @@ import com.intellij.openapi.editor.ex.EditorEx;
 import com.intellij.openapi.editor.markup.RangeHighlighter;
 import com.intellij.openapi.fileTypes.PlainTextFileType;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.util.Disposer;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.ui.EditorTextField;
+;
 import com.intellij.ui.LanguageTextField;
 import com.intellij.ui.components.JBLabel;
 import com.intellij.ui.components.JBScrollBar;
+import com.intellij.util.Alarm;
 import com.intellij.util.ui.JBUI;
 import org.intellij.lang.regexp.RegExpHighlighter;
 import org.intellij.lang.regexp.RegExpLanguage;
@@ -21,6 +27,8 @@ import org.intellij.lang.regexp.intention.CheckRegExpForm;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -42,10 +50,15 @@ public class RegExpToolWindow {
     private LanguageTextField myRegExpTextField;
     private EditorTextField myTestsTextField;
 
+    private JCheckBox multilineCheckBox;
+
     private final JBLabel myRegExpIcon;
     private final JBLabel myTestsIcon;
 
     private final List<RangeHighlighter> myTestsHighlights;
+
+    private Disposable disposable;
+    private Alarm alarm;
 
     public RegExpToolWindow(ToolWindow toolWindow, Project project) {
         this.myProject = project;
@@ -73,17 +86,25 @@ public class RegExpToolWindow {
         myToolWindowContent.setBackground(toolWindow.getComponent().getBackground());
         initializeHintTable();
 
+        disposable = Disposer.newDisposable();
+        alarm = new Alarm(Alarm.ThreadToUse.POOLED_THREAD, disposable);
         DocumentListener documentListener = new DocumentListener() {
             @Override
             public void documentChanged(@NotNull DocumentEvent event) {
-                DocumentListener.super.documentChanged(event);
-                updateTestsHighlights();
+                updateAll();
             }
         };
         myRegExpTextField.addDocumentListener(documentListener);
         myTestsTextField.addDocumentListener(documentListener);
 
-        updateTestsHighlights();
+        multilineCheckBox.addChangeListener(e -> updateAll());
+
+        updateAll();
+    }
+
+    private void updateAll() {
+        alarm.cancelAllRequests();
+        alarm.addRequest(() -> ApplicationManager.getApplication().invokeLater(this::updateTestsHighlights, __ -> alarm.isDisposed()), 0);
     }
 
     private void initializeHintTable() {
@@ -132,7 +153,7 @@ public class RegExpToolWindow {
 
         Pattern pattern;
         try {
-            pattern = Pattern.compile(myRegExpTextField.getText());
+            pattern = Pattern.compile(myRegExpTextField.getText(), multilineCheckBox.isSelected() ? Pattern.MULTILINE : 0);
         } catch (PatternSyntaxException ex) {
             myRegExpIcon.setIcon(AllIcons.General.BalloonError);
             myRegExpIcon.setToolTipText(ex.getDescription());
