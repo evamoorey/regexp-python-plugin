@@ -29,7 +29,6 @@ import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiFile;
 import com.intellij.psi.PsiFileFactory;
-import com.intellij.psi.PsiManager;
 import com.intellij.psi.impl.source.resolve.FileContextUtil;
 import com.intellij.ui.EditorTextField;
 import com.intellij.ui.LanguageTextField;
@@ -80,7 +79,7 @@ public class RegExpToolWindow {
     private final Project myProject;
     private final Disposable myDisposable;
 
-    private final Alarm alarm;
+    private final Alarm myAlarm;
     private final List<RangeHighlighter> myTestsHighlights;
 
     private final ViewerTreeBuilder myPsiTreeBuilder;
@@ -115,32 +114,9 @@ public class RegExpToolWindow {
         myDisposable = Disposer.newDisposable();
 
         initializeTree(myPsiTree);
-        final TreeCellRenderer renderer = myPsiTree.getCellRenderer();
-        myPsiTree.setCellRenderer((tree, value, selected, expanded, leaf, row, hasFocus) -> {
-            final Component c = renderer.getTreeCellRendererComponent(tree, value, selected, expanded, leaf, row, hasFocus);
-            if (value instanceof DefaultMutableTreeNode) {
-                final Object userObject = ((DefaultMutableTreeNode)value).getUserObject();
-                if (userObject instanceof ViewerNodeDescriptor) {
-                    final Object element = ((ViewerNodeDescriptor)userObject).getElement();
-                    if (c instanceof NodeRenderer) {
-                        ((NodeRenderer)c).setToolTipText(element == null ? null : element.getClass().getName());
-                    }
-                    if (element instanceof PsiElement && FileContextUtil.getFileContext(((PsiElement)element).getContainingFile()) != null) {
-                        final TextAttributes attr =
-                                EditorColorsManager.getInstance().getGlobalScheme().getAttributes(EditorColors.INJECTED_LANGUAGE_FRAGMENT);
-                        c.setBackground(attr.getBackgroundColor());
-                    }
-                }
-            }
-            return c;
-        });
+
         myPsiTreeBuilder = new ViewerTreeBuilder(myProject, myPsiTree);
         Disposer.register(myDisposable, myPsiTreeBuilder);
-//        myPsiTree.addTreeSelectionListener(new MyPsiTreeSelectionListener());
-
-//        explanationLabel.setText("Regular Expression Explanation");
-//
-//        usersRegExpLabel.setText("Your RegExp");
 
         usersRegExpLabel.setLabelFor(myRegExpTextField);
         explanationLabel.setLabelFor(myPsiTree);
@@ -162,7 +138,7 @@ public class RegExpToolWindow {
         myToolWindowContent.setBackground(toolWindow.getComponent().getBackground());
         initializeHintTable();
 
-        alarm = new Alarm(Alarm.ThreadToUse.POOLED_THREAD, myDisposable);
+        myAlarm = new Alarm(Alarm.ThreadToUse.POOLED_THREAD, myDisposable);
         DocumentListener documentListener = new DocumentListener() {
             @Override
             public void documentChanged(@NotNull DocumentEvent event) {
@@ -194,6 +170,29 @@ public class RegExpToolWindow {
         ToolTipManager.sharedInstance().registerComponent(tree);
         TreeUtil.installActions(tree);
         new TreeSpeedSearch(tree);
+
+        final TreeCellRenderer renderer = tree.getCellRenderer();
+        tree.setCellRenderer(new TreeCellRenderer() {
+            @Override
+            public Component getTreeCellRendererComponent(JTree tree, Object value, boolean selected, boolean expanded, boolean leaf, int row, boolean hasFocus) {
+                final Component c = renderer.getTreeCellRendererComponent(tree, value, selected, expanded, leaf, row, hasFocus);
+                if (value instanceof DefaultMutableTreeNode) {
+                    final Object userObject = ((DefaultMutableTreeNode) value).getUserObject();
+                    if (userObject instanceof ViewerNodeDescriptor) {
+                        final Object element = ((ViewerNodeDescriptor) userObject).getElement();
+                        if (c instanceof NodeRenderer) {
+                            ((NodeRenderer) c).setToolTipText(element == null ? null : element.getClass().getName());
+                        }
+                        if (element instanceof PsiElement && FileContextUtil.getFileContext(((PsiElement) element).getContainingFile()) != null) {
+                            final TextAttributes attr =
+                                    EditorColorsManager.getInstance().getGlobalScheme().getAttributes(EditorColors.INJECTED_LANGUAGE_FRAGMENT);
+                            c.setBackground(attr.getBackgroundColor());
+                        }
+                    }
+                }
+                return c;
+            }
+        });
     }
 
     private void initializeHintTable() {
@@ -222,19 +221,19 @@ public class RegExpToolWindow {
     }
 
     private void scheduleAllFieldsUpdate() {
-        alarm.cancelAllRequests();
-        alarm.addRequest(() -> ApplicationManager.getApplication().invokeLater(this::updateTestsHighlights, ModalityState.any(), __ -> alarm.isDisposed()), 0);
+        myAlarm.cancelAllRequests();
+        myAlarm.addRequest(() -> ApplicationManager.getApplication().invokeLater(this::allFieldsUpdate, ModalityState.any(), __ -> myAlarm.isDisposed()), 0);
     }
 
-    private void updateTestsHighlights() {
+    private void allFieldsUpdate() {
         HighlightManager highlightManager = HighlightManager.getInstance(myProject);
 
         removeTestsHighlights(highlightManager);
 
-        highlightMatches(highlightManager);
+        updateMatchesAndTree(highlightManager);
     }
 
-    private void highlightMatches(HighlightManager highlightManager) {
+    private void updateMatchesAndTree(HighlightManager highlightManager) {
         Editor testsEditor = myTestsTextField.getEditor();
         if (testsEditor == null) {
             return;
@@ -281,11 +280,11 @@ public class RegExpToolWindow {
         ((ViewerTreeStructure)myPsiTreeBuilder.getTreeStructure()).setRootPsiElement((PsiElement) Arrays.stream(psiFile.getChildren()).toArray()[0]);
 
         //noinspection UnstableApiUsage
-        myPsiTreeBuilder.queueUpdate();
-
-        for (int i = 0; i < myPsiTree.getRowCount(); i++) {
-            myPsiTree.expandRow(i);
-        }
+        myPsiTreeBuilder.queueUpdate().doWhenDone(()->{
+            for (int i = 0; i < myPsiTree.getRowCount(); i++) {
+                myPsiTree.expandRow(i);
+            }
+        });
 
     }
 
