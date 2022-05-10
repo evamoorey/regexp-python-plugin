@@ -1,3 +1,18 @@
+/*
+ * Copyright 2022 Eva Galyuta and Sergey Nesterenko
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package org.intellij.sdk.regexp;
 
 import com.intellij.codeInsight.highlighting.HighlightManager;
@@ -269,7 +284,7 @@ public class RegExpToolWindow {
             highlightManager.addRangeHighlight(testsEditor, start, end, RegExpHighlighter.MATCHED_GROUPS, true, myTestsHighlights);
         }
 
-        EditorEx regexEditor = (EditorEx)myRegExpTextField.getEditor();
+        EditorEx regexEditor = (EditorEx) myRegExpTextField.getEditor();
         if (regexEditor == null) {
             return;
         }
@@ -277,10 +292,10 @@ public class RegExpToolWindow {
         String ext = "regex";
         final PsiFile psiFile = PsiFileFactory.getInstance(myProject).createFileFromText("Dummy." + ext, regexFileType, myRegExpTextField.getText());
         //noinspection UnstableApiUsage
-        ((ViewerTreeStructure)myPsiTreeBuilder.getTreeStructure()).setRootPsiElement((PsiElement) Arrays.stream(psiFile.getChildren()).toArray()[0]);
+        ((ViewerTreeStructure) myPsiTreeBuilder.getTreeStructure()).setRootPsiElement((PsiElement) Arrays.stream(psiFile.getChildren()).toArray()[0]);
 
         //noinspection UnstableApiUsage
-        myPsiTreeBuilder.queueUpdate().doWhenDone(()->{
+        myPsiTreeBuilder.queueUpdate().doWhenDone(() -> {
             for (int i = 0; i < myPsiTree.getRowCount(); i++) {
                 myPsiTree.expandRow(i);
             }
