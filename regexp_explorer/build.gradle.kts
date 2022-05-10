@@ -2,7 +2,6 @@ plugins {
     id("java")
     id("org.jetbrains.intellij") version "1.5.2"
 }
-
 group = "com.intellij.sdk"
 version = "0.1.0"
 
@@ -32,4 +31,8 @@ tasks {
         sinceBuild.set("212")
         untilBuild.set("221.*")
     }
+    publishPlugin {
+        token.set(System.getenv("perm:ZXZnYWx5dXRh.OTItNjA0Nw==.NBbIfK584H9BXOtRIPMyXjOD0RYeCu"))
+    }
 }
+
