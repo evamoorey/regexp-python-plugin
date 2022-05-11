@@ -31,8 +31,5 @@ tasks {
         sinceBuild.set("212")
         untilBuild.set("221.*")
     }
-    publishPlugin {
-        token.set(System.getenv("perm:ZXZnYWx5dXRh.OTItNjA0Nw==.NBbIfK584H9BXOtRIPMyXjOD0RYeCu"))
-    }
 }
 
