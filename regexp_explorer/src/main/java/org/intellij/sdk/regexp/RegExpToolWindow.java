@@ -90,6 +90,8 @@ public class RegExpToolWindow {
     private JComboBox hintComboBox;
     private JPanel hintTable;
     private TitledSeparator quickReferenceLabel;
+    private JSplitPane verticalSplit;
+    private JSplitPane horizontalSplit;
 
     private final Project myProject;
     private final Disposable myDisposable;
@@ -162,6 +164,9 @@ public class RegExpToolWindow {
         };
         myRegExpTextField.addDocumentListener(documentListener);
         myTestsTextField.addDocumentListener(documentListener);
+
+        verticalSplit.setDividerSize(0);
+        horizontalSplit.setDividerSize(0);
 
         multilineCheckBox.addChangeListener(e -> scheduleAllFieldsUpdate());
 

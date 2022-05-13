@@ -11,16 +11,17 @@
     </properties>
     <border type="none"/>
     <children>
-      <splitpane id="21c99">
+      <splitpane id="21c99" binding="verticalSplit">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="200" height="200"/>
           </grid>
         </constraints>
         <properties>
-          <dividerLocation value="300"/>
-          <dividerSize value="4"/>
-          <lastDividerLocation value="300"/>
+          <dividerLocation value="329"/>
+          <dividerSize value="0"/>
+          <foreground color="-11053225"/>
+          <lastDividerLocation value="329"/>
         </properties>
         <border type="empty"/>
         <children>
@@ -67,7 +68,7 @@
                 </constraints>
                 <properties>
                   <actionCommand value="Multiline"/>
-                  <label value="[teststring.checkbox.multiline.text / toolwindow/toolwindow]"/>
+                  <label value="Multiline"/>
                   <selected value="true"/>
                   <text resource-bundle="toolwindow/toolwindow" key="teststring.checkbox.multiline.text"/>
                   <toolTipText resource-bundle="toolwindow/toolwindow" key="teststring.checkbox.multiline.tooltip"/>
@@ -85,14 +86,15 @@
               </component>
             </children>
           </grid>
-          <splitpane id="7c0d0">
+          <splitpane id="7c0d0" binding="horizontalSplit">
             <constraints>
               <splitpane position="right"/>
             </constraints>
             <properties>
               <dividerLocation value="300"/>
-              <dividerSize value="4"/>
+              <dividerSize value="0"/>
               <focusable value="true"/>
+              <foreground color="-11053225"/>
               <lastDividerLocation value="300"/>
               <oneTouchExpandable value="false"/>
               <orientation value="0"/>
