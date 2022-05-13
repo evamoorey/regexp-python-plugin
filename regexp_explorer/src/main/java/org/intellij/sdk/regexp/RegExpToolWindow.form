@@ -3,9 +3,10 @@
   <grid id="27dc6" binding="myToolWindowContent" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="8" left="8" bottom="8" right="8"/>
     <constraints>
-      <xy x="20" y="20" width="779" height="817"/>
+      <xy x="20" y="20" width="793" height="817"/>
     </constraints>
     <properties>
+      <foreground color="-11053225"/>
       <opaque value="true"/>
       <preferredSize width="960" height="600"/>
     </properties>
@@ -18,19 +19,23 @@
           </grid>
         </constraints>
         <properties>
-          <dividerLocation value="329"/>
-          <dividerSize value="0"/>
+          <dividerLocation value="326"/>
+          <dividerSize value="1"/>
           <foreground color="-11053225"/>
           <lastDividerLocation value="329"/>
         </properties>
-        <border type="empty"/>
+        <border type="empty">
+          <size top="0" left="0" bottom="0" right="0"/>
+        </border>
         <children>
           <grid id="50fc7" layout-manager="GridLayoutManager" row-count="5" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <splitpane position="left"/>
             </constraints>
-            <properties/>
+            <properties>
+              <foreground color="-11053225"/>
+            </properties>
             <border type="none"/>
             <children>
               <component id="d6526" class="com.intellij.ui.TitledSeparator" binding="usersRegExpLabel">
@@ -91,8 +96,9 @@
               <splitpane position="right"/>
             </constraints>
             <properties>
+              <continuousLayout value="false"/>
               <dividerLocation value="300"/>
-              <dividerSize value="0"/>
+              <dividerSize value="1"/>
               <focusable value="true"/>
               <foreground color="-11053225"/>
               <lastDividerLocation value="300"/>

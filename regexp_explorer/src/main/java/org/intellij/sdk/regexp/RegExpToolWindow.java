@@ -45,10 +45,7 @@ import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiFile;
 import com.intellij.psi.PsiFileFactory;
 import com.intellij.psi.impl.source.resolve.FileContextUtil;
-import com.intellij.ui.EditorTextField;
-import com.intellij.ui.LanguageTextField;
-import com.intellij.ui.TitledSeparator;
-import com.intellij.ui.TreeSpeedSearch;
+import com.intellij.ui.*;
 import com.intellij.ui.components.JBLabel;
 import com.intellij.ui.components.JBScrollBar;
 import com.intellij.ui.treeStructure.Tree;
@@ -61,6 +58,11 @@ import org.intellij.lang.regexp.intention.CheckRegExpForm;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
+import javax.swing.border.Border;
+import javax.swing.plaf.basic.BasicBorders;
+import javax.swing.plaf.basic.BasicSplitPaneDivider;
+import javax.swing.plaf.basic.BasicSplitPaneUI;
+import javax.swing.plaf.metal.MetalSplitPaneUI;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreeCellRenderer;
@@ -165,8 +167,41 @@ public class RegExpToolWindow {
         myRegExpTextField.addDocumentListener(documentListener);
         myTestsTextField.addDocumentListener(documentListener);
 
-        verticalSplit.setDividerSize(0);
-        horizontalSplit.setDividerSize(0);
+        verticalSplit.setDividerSize(4);
+        verticalSplit.setUI(new BasicSplitPaneUI() {
+            public BasicSplitPaneDivider createDefaultDivider() {
+                return new BasicSplitPaneDivider(this) {
+                    public void setBorder(Border b) {
+                    }
+
+                    @Override
+                    public void paint(Graphics g) {
+                        g.setColor(myRegExpTextField.getBackground());
+                        g.fillRect(0, 0, getSize().width, getSize().height);
+                        super.paint(g);
+                    }
+                };
+            }
+        });
+        verticalSplit.setBorder(null);
+
+        horizontalSplit.setDividerSize(4);
+        horizontalSplit.setUI(new BasicSplitPaneUI() {
+            public BasicSplitPaneDivider createDefaultDivider() {
+                return new BasicSplitPaneDivider(this) {
+                    public void setBorder(Border b) {
+                    }
+
+                    @Override
+                    public void paint(Graphics g) {
+                        g.setColor(myRegExpTextField.getBackground());
+                        g.fillRect(0, 0, getSize().width, getSize().height);
+                        super.paint(g);
+                    }
+                };
+            }
+        });
+        horizontalSplit.setBorder(null);
 
         multilineCheckBox.addChangeListener(e -> scheduleAllFieldsUpdate());
 
