@@ -25,14 +25,13 @@ limitations under the License.-->
     <!-- Text to display as description on Preferences/Settings | Plugin page -->
     <description>
         <![CDATA[
-        <p>The RegExp Explorer plugin allows users to test and explore regular expressions in PyCharm.</p>
-        <p>Includes functionality for regular expressions:</p>
+        <p>The RegExp Explorer plugin allows users to test and explore regular expressions in IDE.</p>
+        <p>Includes functionality for regular expressions: </p>
         <ul>
           <li>test</li>
           <li>explanation</li>
           <li>validation</li>
         </ul>
-        <p>Plugin designed to simplify the development of regular expressions.</p>
         <p>Plugin adds a permanent tool window with 4 fields:</p>
         <ul>
           <li>Regular expression text field with syntax highlighting</li>
@@ -44,11 +43,12 @@ limitations under the License.-->
         <ul>
           <li>Shift + Tab to jump between text fields</li>
         </ul>
+        <p>Plugin designed to simplify the development of regular expressions.</p>
         ]]>
     </description>
     <change-notes>
         <![CDATA[
-      <b>0.2.0</b> release <br>
+      <b>0.2.1</b> release <br>
     ]]>
     </change-notes>
 
